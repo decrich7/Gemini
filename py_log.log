@@ -1,0 +1,193 @@
+bot.py:81 #INFO     [2024-01-24 19:08:20,298] - __main__ - Starting bot
+base.py:1234 #INFO     [2024-01-24 19:08:21,368] - gino.engine._SAEngine - select relname from pg_class c join pg_namespace n on n.oid=c.relnamespace where pg_catalog.pg_table_is_visible(c.oid) and relname=$1
+base.py:1236 #INFO     [2024-01-24 19:08:21,369] - gino.engine._SAEngine - ('proxy',)
+base.py:1234 #INFO     [2024-01-24 19:08:21,374] - gino.engine._SAEngine - select relname from pg_class c join pg_namespace n on n.oid=c.relnamespace where pg_catalog.pg_table_is_visible(c.oid) and relname=$1
+base.py:1236 #INFO     [2024-01-24 19:08:21,374] - gino.engine._SAEngine - ('token',)
+base.py:1234 #INFO     [2024-01-24 19:08:21,375] - gino.engine._SAEngine - select relname from pg_class c join pg_namespace n on n.oid=c.relnamespace where pg_catalog.pg_table_is_visible(c.oid) and relname=$1
+base.py:1236 #INFO     [2024-01-24 19:08:21,375] - gino.engine._SAEngine - ('prompt',)
+base.py:1234 #INFO     [2024-01-24 19:08:21,376] - gino.engine._SAEngine - select relname from pg_class c join pg_namespace n on n.oid=c.relnamespace where pg_catalog.pg_table_is_visible(c.oid) and relname=$1
+base.py:1236 #INFO     [2024-01-24 19:08:21,376] - gino.engine._SAEngine - ('users',)
+base.py:1234 #INFO     [2024-01-24 19:08:21,376] - gino.engine._SAEngine - select relname from pg_class c join pg_namespace n on n.oid=c.relnamespace where pg_catalog.pg_table_is_visible(c.oid) and relname=$1
+base.py:1236 #INFO     [2024-01-24 19:08:21,376] - gino.engine._SAEngine - ('message_edit',)
+base.py:1234 #INFO     [2024-01-24 19:08:21,377] - gino.engine._SAEngine - select relname from pg_class c join pg_namespace n on n.oid=c.relnamespace where pg_catalog.pg_table_is_visible(c.oid) and relname=$1
+base.py:1236 #INFO     [2024-01-24 19:08:21,377] - gino.engine._SAEngine - ('chats',)
+base.py:1234 #INFO     [2024-01-24 19:08:21,378] - gino.engine._SAEngine - select relname from pg_class c join pg_namespace n on n.oid=c.relnamespace where pg_catalog.pg_table_is_visible(c.oid) and relname=$1
+base.py:1236 #INFO     [2024-01-24 19:08:21,378] - gino.engine._SAEngine - ('chat_messages',)
+base.py:1234 #INFO     [2024-01-24 19:08:21,379] - gino.engine._SAEngine - 
+DROP TABLE chat_messages
+base.py:1236 #INFO     [2024-01-24 19:08:21,379] - gino.engine._SAEngine - ()
+base.py:769 #INFO     [2024-01-24 19:08:21,379] - gino.engine._SAEngine - COMMIT
+base.py:1234 #INFO     [2024-01-24 19:08:21,391] - gino.engine._SAEngine - 
+DROP TABLE chats
+base.py:1236 #INFO     [2024-01-24 19:08:21,392] - gino.engine._SAEngine - ()
+base.py:769 #INFO     [2024-01-24 19:08:21,392] - gino.engine._SAEngine - COMMIT
+base.py:1234 #INFO     [2024-01-24 19:08:21,395] - gino.engine._SAEngine - 
+DROP TABLE message_edit
+base.py:1236 #INFO     [2024-01-24 19:08:21,395] - gino.engine._SAEngine - ()
+base.py:769 #INFO     [2024-01-24 19:08:21,395] - gino.engine._SAEngine - COMMIT
+base.py:1234 #INFO     [2024-01-24 19:08:21,400] - gino.engine._SAEngine - 
+DROP TABLE users
+base.py:1236 #INFO     [2024-01-24 19:08:21,400] - gino.engine._SAEngine - ()
+base.py:769 #INFO     [2024-01-24 19:08:21,400] - gino.engine._SAEngine - COMMIT
+base.py:1234 #INFO     [2024-01-24 19:08:21,404] - gino.engine._SAEngine - 
+DROP TABLE prompt
+base.py:1236 #INFO     [2024-01-24 19:08:21,404] - gino.engine._SAEngine - ()
+base.py:769 #INFO     [2024-01-24 19:08:21,404] - gino.engine._SAEngine - COMMIT
+base.py:1234 #INFO     [2024-01-24 19:08:21,408] - gino.engine._SAEngine - 
+DROP TABLE token
+base.py:1236 #INFO     [2024-01-24 19:08:21,408] - gino.engine._SAEngine - ()
+base.py:769 #INFO     [2024-01-24 19:08:21,408] - gino.engine._SAEngine - COMMIT
+base.py:1234 #INFO     [2024-01-24 19:08:21,412] - gino.engine._SAEngine - 
+DROP TABLE proxy
+base.py:1236 #INFO     [2024-01-24 19:08:21,412] - gino.engine._SAEngine - ()
+base.py:769 #INFO     [2024-01-24 19:08:21,412] - gino.engine._SAEngine - COMMIT
+base.py:1234 #INFO     [2024-01-24 19:08:21,417] - gino.engine._SAEngine - select relname from pg_class c join pg_namespace n on n.oid=c.relnamespace where pg_catalog.pg_table_is_visible(c.oid) and relname=$1
+base.py:1236 #INFO     [2024-01-24 19:08:21,417] - gino.engine._SAEngine - ('proxy',)
+base.py:1234 #INFO     [2024-01-24 19:08:21,417] - gino.engine._SAEngine - select relname from pg_class c join pg_namespace n on n.oid=c.relnamespace where pg_catalog.pg_table_is_visible(c.oid) and relname=$1
+base.py:1236 #INFO     [2024-01-24 19:08:21,417] - gino.engine._SAEngine - ('token',)
+base.py:1234 #INFO     [2024-01-24 19:08:21,418] - gino.engine._SAEngine - select relname from pg_class c join pg_namespace n on n.oid=c.relnamespace where pg_catalog.pg_table_is_visible(c.oid) and relname=$1
+base.py:1236 #INFO     [2024-01-24 19:08:21,418] - gino.engine._SAEngine - ('prompt',)
+base.py:1234 #INFO     [2024-01-24 19:08:21,418] - gino.engine._SAEngine - select relname from pg_class c join pg_namespace n on n.oid=c.relnamespace where pg_catalog.pg_table_is_visible(c.oid) and relname=$1
+base.py:1236 #INFO     [2024-01-24 19:08:21,419] - gino.engine._SAEngine - ('users',)
+base.py:1234 #INFO     [2024-01-24 19:08:21,419] - gino.engine._SAEngine - select relname from pg_class c join pg_namespace n on n.oid=c.relnamespace where pg_catalog.pg_table_is_visible(c.oid) and relname=$1
+base.py:1236 #INFO     [2024-01-24 19:08:21,419] - gino.engine._SAEngine - ('message_edit',)
+base.py:1234 #INFO     [2024-01-24 19:08:21,420] - gino.engine._SAEngine - select relname from pg_class c join pg_namespace n on n.oid=c.relnamespace where pg_catalog.pg_table_is_visible(c.oid) and relname=$1
+base.py:1236 #INFO     [2024-01-24 19:08:21,420] - gino.engine._SAEngine - ('chats',)
+base.py:1234 #INFO     [2024-01-24 19:08:21,420] - gino.engine._SAEngine - select relname from pg_class c join pg_namespace n on n.oid=c.relnamespace where pg_catalog.pg_table_is_visible(c.oid) and relname=$1
+base.py:1236 #INFO     [2024-01-24 19:08:21,420] - gino.engine._SAEngine - ('chat_messages',)
+base.py:1234 #INFO     [2024-01-24 19:08:21,421] - gino.engine._SAEngine - 
+CREATE TABLE proxy (
+	id SERIAL NOT NULL, 
+	proxy VARCHAR(100), 
+	login VARCHAR(100), 
+	password VARCHAR(100), 
+	created_at TIMESTAMP WITH TIME ZONE DEFAULT now(), 
+	updated_at TIMESTAMP WITH TIME ZONE DEFAULT now(), 
+	PRIMARY KEY (id)
+)
+
+
+base.py:1236 #INFO     [2024-01-24 19:08:21,421] - gino.engine._SAEngine - ()
+base.py:769 #INFO     [2024-01-24 19:08:21,421] - gino.engine._SAEngine - COMMIT
+base.py:1234 #INFO     [2024-01-24 19:08:21,432] - gino.engine._SAEngine - 
+CREATE TABLE token (
+	id SERIAL NOT NULL, 
+	token VARCHAR(320), 
+	email VARCHAR(100), 
+	created_at TIMESTAMP WITH TIME ZONE DEFAULT now(), 
+	updated_at TIMESTAMP WITH TIME ZONE DEFAULT now(), 
+	PRIMARY KEY (id)
+)
+
+
+base.py:1236 #INFO     [2024-01-24 19:08:21,432] - gino.engine._SAEngine - ()
+base.py:769 #INFO     [2024-01-24 19:08:21,432] - gino.engine._SAEngine - COMMIT
+base.py:1234 #INFO     [2024-01-24 19:08:21,440] - gino.engine._SAEngine - 
+CREATE TABLE prompt (
+	id SERIAL NOT NULL, 
+	label VARCHAR(50), 
+	name_mode VARCHAR(100), 
+	prompt VARCHAR(4096), 
+	created_at TIMESTAMP WITH TIME ZONE DEFAULT now(), 
+	updated_at TIMESTAMP WITH TIME ZONE DEFAULT now(), 
+	PRIMARY KEY (id)
+)
+
+
+base.py:1236 #INFO     [2024-01-24 19:08:21,440] - gino.engine._SAEngine - ()
+base.py:769 #INFO     [2024-01-24 19:08:21,440] - gino.engine._SAEngine - COMMIT
+base.py:1234 #INFO     [2024-01-24 19:08:21,450] - gino.engine._SAEngine - 
+CREATE TABLE users (
+	id SERIAL NOT NULL, 
+	tg_id BIGINT, 
+	username VARCHAR(100), 
+	is_premium BOOLEAN, 
+	language_code VARCHAR(5), 
+	full_name VARCHAR(150), 
+	prime BOOLEAN, 
+	referal VARCHAR(50), 
+	chat_id BIGINT, 
+	created_at TIMESTAMP WITH TIME ZONE DEFAULT now(), 
+	updated_at TIMESTAMP WITH TIME ZONE DEFAULT now(), 
+	PRIMARY KEY (id), 
+	UNIQUE (tg_id)
+)
+
+
+base.py:1236 #INFO     [2024-01-24 19:08:21,451] - gino.engine._SAEngine - ()
+base.py:769 #INFO     [2024-01-24 19:08:21,451] - gino.engine._SAEngine - COMMIT
+base.py:1234 #INFO     [2024-01-24 19:08:21,462] - gino.engine._SAEngine - 
+CREATE TABLE message_edit (
+	id BIGSERIAL NOT NULL, 
+	tg_id BIGINT, 
+	msg_id INTEGER, 
+	user_promt VARCHAR(4096), 
+	work BOOLEAN, 
+	created_at TIMESTAMP WITH TIME ZONE DEFAULT now(), 
+	updated_at TIMESTAMP WITH TIME ZONE DEFAULT now(), 
+	PRIMARY KEY (id)
+)
+
+
+base.py:1236 #INFO     [2024-01-24 19:08:21,462] - gino.engine._SAEngine - ()
+base.py:769 #INFO     [2024-01-24 19:08:21,462] - gino.engine._SAEngine - COMMIT
+base.py:1234 #INFO     [2024-01-24 19:08:21,471] - gino.engine._SAEngine - 
+CREATE TABLE chats (
+	id BIGSERIAL NOT NULL, 
+	user_tg_id BIGINT, 
+	created_at TIMESTAMP WITH TIME ZONE DEFAULT now(), 
+	updated_at TIMESTAMP WITH TIME ZONE DEFAULT now(), 
+	PRIMARY KEY (id)
+)
+
+
+base.py:1236 #INFO     [2024-01-24 19:08:21,471] - gino.engine._SAEngine - ()
+base.py:769 #INFO     [2024-01-24 19:08:21,471] - gino.engine._SAEngine - COMMIT
+base.py:1234 #INFO     [2024-01-24 19:08:21,478] - gino.engine._SAEngine - 
+CREATE TABLE chat_messages (
+	id BIGSERIAL NOT NULL, 
+	chat_id INTEGER, 
+	role VARCHAR(7), 
+	text VARCHAR(4096), 
+	created_at TIMESTAMP WITH TIME ZONE DEFAULT now(), 
+	updated_at TIMESTAMP WITH TIME ZONE DEFAULT now(), 
+	PRIMARY KEY (id)
+)
+
+
+base.py:1236 #INFO     [2024-01-24 19:08:21,478] - gino.engine._SAEngine - ()
+base.py:769 #INFO     [2024-01-24 19:08:21,478] - gino.engine._SAEngine - COMMIT
+base.py:1234 #INFO     [2024-01-24 19:08:21,490] - gino.engine._SAEngine - INSERT INTO proxy (proxy, login, password, updated_at) VALUES ($1, $2, $3, now()) RETURNING proxy.id, proxy.proxy, proxy.login, proxy.password, proxy.created_at, proxy.updated_at
+base.py:1236 #INFO     [2024-01-24 19:08:21,490] - gino.engine._SAEngine - ('http://45.4.197.124:8000', '8K58YN', '6km5bA')
+base.py:769 #INFO     [2024-01-24 19:08:21,490] - gino.engine._SAEngine - COMMIT
+base.py:1234 #INFO     [2024-01-24 19:08:21,492] - gino.engine._SAEngine - INSERT INTO token (token, email, updated_at) VALUES ($1, $2, now()) RETURNING token.id, token.token, token.email, token.created_at, token.updated_at
+base.py:1236 #INFO     [2024-01-24 19:08:21,493] - gino.engine._SAEngine - ('AIzaSyAMpQKMwsGXW_u03oPijFoaPQeIv4K_uKE', 'pavel.boy4enko900@gmai.com')
+base.py:769 #INFO     [2024-01-24 19:08:21,493] - gino.engine._SAEngine - COMMIT
+base.py:1234 #INFO     [2024-01-24 19:08:21,495] - gino.engine._SAEngine - INSERT INTO prompt (label, name_mode, prompt, updated_at) VALUES ($1, $2, $3, now()) RETURNING prompt.id, prompt.label, prompt.name_mode, prompt.prompt, prompt.created_at, prompt.updated_at
+base.py:769 #INFO     [2024-01-24 19:08:21,605] - gino.engine._SAEngine - COMMIT
+base.py:1234 #INFO     [2024-01-24 19:08:21,609] - gino.engine._SAEngine - INSERT INTO prompt (label, name_mode, prompt, updated_at) VALUES ($1, $2, $3, now()) RETURNING prompt.id, prompt.label, prompt.name_mode, prompt.prompt, prompt.created_at, prompt.updated_at
+base.py:769 #INFO     [2024-01-24 19:08:21,621] - gino.engine._SAEngine - COMMIT
+base.py:1234 #INFO     [2024-01-24 19:08:21,623] - gino.engine._SAEngine - INSERT INTO prompt (label, name_mode, prompt, updated_at) VALUES ($1, $2, $3, now()) RETURNING prompt.id, prompt.label, prompt.name_mode, prompt.prompt, prompt.created_at, prompt.updated_at
+base.py:769 #INFO     [2024-01-24 19:08:21,636] - gino.engine._SAEngine - COMMIT
+base.py:1234 #INFO     [2024-01-24 19:08:21,638] - gino.engine._SAEngine - INSERT INTO prompt (label, name_mode, prompt, updated_at) VALUES ($1, $2, $3, now()) RETURNING prompt.id, prompt.label, prompt.name_mode, prompt.prompt, prompt.created_at, prompt.updated_at
+base.py:769 #INFO     [2024-01-24 19:08:21,652] - gino.engine._SAEngine - COMMIT
+base.py:1234 #INFO     [2024-01-24 19:08:21,653] - gino.engine._SAEngine - INSERT INTO prompt (label, name_mode, prompt, updated_at) VALUES ($1, $2, $3, now()) RETURNING prompt.id, prompt.label, prompt.name_mode, prompt.prompt, prompt.created_at, prompt.updated_at
+base.py:769 #INFO     [2024-01-24 19:08:21,668] - gino.engine._SAEngine - COMMIT
+base.py:1234 #INFO     [2024-01-24 19:08:21,670] - gino.engine._SAEngine - INSERT INTO prompt (label, name_mode, prompt, updated_at) VALUES ($1, $2, $3, now()) RETURNING prompt.id, prompt.label, prompt.name_mode, prompt.prompt, prompt.created_at, prompt.updated_at
+base.py:769 #INFO     [2024-01-24 19:08:21,683] - gino.engine._SAEngine - COMMIT
+base.py:1234 #INFO     [2024-01-24 19:08:21,685] - gino.engine._SAEngine - INSERT INTO prompt (label, name_mode, prompt, updated_at) VALUES ($1, $2, $3, now()) RETURNING prompt.id, prompt.label, prompt.name_mode, prompt.prompt, prompt.created_at, prompt.updated_at
+base.py:769 #INFO     [2024-01-24 19:08:21,699] - gino.engine._SAEngine - COMMIT
+base.py:1234 #INFO     [2024-01-24 19:08:21,701] - gino.engine._SAEngine - INSERT INTO prompt (label, name_mode, prompt, updated_at) VALUES ($1, $2, $3, now()) RETURNING prompt.id, prompt.label, prompt.name_mode, prompt.prompt, prompt.created_at, prompt.updated_at
+base.py:769 #INFO     [2024-01-24 19:08:21,714] - gino.engine._SAEngine - COMMIT
+base.py:1234 #INFO     [2024-01-24 19:08:21,716] - gino.engine._SAEngine - INSERT INTO users (tg_id, username, is_premium, language_code, full_name, prime, referal, chat_id, updated_at) VALUES ($1, $2, $3, $4, $5, $6, $7, $8, now()) RETURNING users.id, users.tg_id, users.username, users.is_premium, users.language_code, users.full_name, users.prime, users.referal, users.chat_id, users.created_at, users.updated_at
+base.py:1236 #INFO     [2024-01-24 19:08:21,716] - gino.engine._SAEngine - (778981429, 'dfgdfg', True, 'gf', 'dfgdfg', False, 'xxx', 778981429)
+base.py:769 #INFO     [2024-01-24 19:08:21,716] - gino.engine._SAEngine - COMMIT
+base.py:454 #INFO     [2024-01-24 19:08:21,728] - apscheduler.scheduler - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+base.py:454 #INFO     [2024-01-24 19:08:21,728] - apscheduler.scheduler - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+base.py:895 #INFO     [2024-01-24 19:08:21,730] - apscheduler.scheduler - Added job "clean_message_edit" to job store "default"
+base.py:895 #INFO     [2024-01-24 19:08:21,730] - apscheduler.scheduler - Added job "clean_chats_and_msg_chats" to job store "default"
+base.py:181 #INFO     [2024-01-24 19:08:21,730] - apscheduler.scheduler - Scheduler started
+dispatcher.py:359 #INFO     [2024-01-24 19:08:21,839] - aiogram.dispatcher.dispatcher - Start polling.
+dispatcher.py:408 #WARNING  [2024-01-24 19:11:20,972] - aiogram.dispatcher.dispatcher - Polling is stopped.
+bot.py:152 #ERROR    [2024-01-24 19:11:20,974] - __main__ - Bot stopped!
+dispatcher.py:436 #INFO     [2024-01-24 19:11:20,991] - aiogram.dispatcher.dispatcher - Stop polling...
