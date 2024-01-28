@@ -1,0 +1,51 @@
+# Translations template for PROJECT.
+# Copyright (C) 2024 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2024-01-29 01:05+0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.1\n"
+
+#: tgbot/handlers/start.py:45
+msgid ""
+"🚀 Приветствую тебя!\n"
+"\n"
+"<strong>🤖 Я ПОЛНОСТЬЮ БЕСПЛАТНЫЙ ассистент, основанный на новейшем "
+"искусственном интеллекте Gemini от компании Google.</strong>\n"
+"\n"
+"<strong>Что я умею:\n"
+"</strong>    1. 📄 <i>Написание сочинений, эссэ, докладов на различные "
+"темы и в разных стиля</i>\n"
+"\n"
+"    2. 🌙 <i>Толкование снов</i>\n"
+"\n"
+"    3. 🔮 <i>Индивидуальный астрологический прогноз и составление "
+"нотальной карты</i>\n"
+"\n"
+"   4. 🤵‍♂ <i>Генерирование идей для стартапа</i>\n"
+"    <strong>И многое другое!</strong>\n"
+"\n"
+"🌌 Встречай будущее прямо здесь и сейчас! 🌌\n"
+"\n"
+"🤓Чтобы узнать все возможности нажми - /help"
+msgstr ""
+
+#: tgbot/handlers/start.py:46
+msgid "👀 Напиши мне любой вопрос"
+msgstr ""
+
+#: tgbot/handlers/start.py:58
+msgid "Ваш язык был изменен"
+msgstr ""
+

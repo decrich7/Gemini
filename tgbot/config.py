@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+from pathlib import Path
 
 from environs import Env
 from typing import List
@@ -10,6 +11,8 @@ class DbConfig:
     password: str
     user: str
     database: str
+
+
 
 
 @dataclass
@@ -25,15 +28,27 @@ class Miscellaneous:
 
 
 @dataclass
+class I18nData:
+    I18N_DOMAIN: str
+    LOCALES_DIR: Path
+
+
+@dataclass
 class Config:
     tg_bot: TgBot
     db: DbConfig
     misc: Miscellaneous
+    i18n_data: I18nData
+
+
 
 
 def load_config(path: str = None):
     env = Env()
     env.read_env(path)
+
+    BASE_DIR = Path(__file__).parent.parent
+
 
     return Config(
         tg_bot=TgBot(
@@ -47,5 +62,7 @@ def load_config(path: str = None):
             user=env.str('DB_USER'),
             database=env.str('DB_NAME')
         ),
-        misc=Miscellaneous()
+        misc=Miscellaneous(),
+        i18n_data=I18nData(I18N_DOMAIN='testbot', LOCALES_DIR=BASE_DIR / 'locales')
     )
+# pg_dump -h 127.0.0.1 -U postgres -F c -f dump.tar.gz gemini_bot

@@ -20,15 +20,16 @@ async def answer_model_base(message: types.Message):
     await message.answer_chat_action(ChatActions.TYPING)
 
     user: User = await User.select_user(message.from_user.id)
-    time_difference = datetime.datetime.now() - user.updated_at
+    time_difference: datetime = datetime.datetime.now() - user.updated_at
+    print(time_difference.days)
 
-    if user.count_query > 7 and time_difference.seconds <= 200:
+    if user.count_query > 35 and time_difference.days <= 1:
         logging.info(f'Превысил лимит пользователь - {message.from_user.username}')
         await message.answer('🥺 Похоже вы достигли лимита запросов на сегодня, попробуйте через 24 часа😚\n'
                              '🥸Мы предоставляем самые большие <strong>БЕСПЛАТНЫЕ</strong> лимиты в телеграм\n'
                              'Но не можем их совсем убрать из за угрозы атаки злоумышленников😞')
         return
-    elif time_difference.seconds >= 200:
+    elif time_difference.days >= 1:
         await User.clear_counter(message.from_user.id)
         await User.add_count_one(message.from_user.id)
 
@@ -43,7 +44,7 @@ async def answer_model_base(message: types.Message):
         'HARM_CATEGORY_HARASSMENT': 'BLOCK_NONE',
         'HARM_CATEGORY_HATE_SPEECH': 'BLOCK_NONE',
         'HARM_CATEGORY_SEXUALLY_EXPLICIT': 'BLOCK_NONE',
-        'temperature': 0.3
+        'temperature': 0.4
 
     }
     text = await main_text_input(message.text, params=params)

@@ -54,7 +54,8 @@ def replace_text(string):
 # print(new_text)
 from pathlib import Path
 
-directory = Path(r'C:\Users\PAJILOY PAVUK\PycharmProjects\GeminiAiBot\tgbot')
+directory = Path('/home/lorehunt/PycharmProjects/Gemini/tgbot')
+print(directory)
 line_count = 0
 
 for f in directory.rglob('*.py'):
@@ -64,8 +65,8 @@ for f in directory.rglob('*.py'):
     local_count = 0
     for line in f.read_text(encoding='utf-8').splitlines():
         line = line.strip()
-        # if not line or line.startswith(('#', '"', "'")):
-        #     continue
+        if not line or line.startswith(('#', '"', "'")):
+            continue
         local_count += 1
 
     print(f'{f} - {local_count} ст')

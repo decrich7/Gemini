@@ -64,6 +64,33 @@ class ChatInput(BaseAioRequests):
 
 
         if response.get('candidates'):
+
+            finish_reason = response.get('candidates')[0].get('content').get('finishReason')
+            if finish_reason:
+                if finish_reason == 'SAFETY':
+                    logging.exception(f'Error TextInput: {finish_reason}')
+
+                    return ' Генерация контента была отменена по соображениям безопасности(нарушение политики безопасности)'
+                elif finish_reason == 'MAX_TOKENS':
+                    logging.exception(f'Error TextInput: {finish_reason}')
+
+                    return ' Достигнуто максимальное количество токенов, попробуйте другой запрос '
+
+                elif finish_reason == 'RECITATION':
+                    logging.exception(f'Error TextInput: {finish_reason}')
+
+                    return '  Генерация контента была отменена по причине "Цитирования"  '
+
+                elif finish_reason == 'OTHER':
+                    logging.exception(f'Error TextInput: {finish_reason}')
+
+                    return ' Кажется возникла неизвестная ошибка, попробуйте позже '
+
+                else:
+                    logging.exception(f'Error TextInput: блок else ')
+
+                    return ' Кажется возникла ошибка, попробуйте позже '
+
             try:
                 string = response['candidates'][0]['content']['parts'][0]['text']
 
