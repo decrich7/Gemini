@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 import logging
+from tgbot.services.lang_translate import _
 
 from aiogram import types, Dispatcher
 from aiogram.types import CallbackQuery
@@ -21,13 +22,12 @@ async def answer_model_base(message: types.Message):
 
     user: User = await User.select_user(message.from_user.id)
     time_difference: datetime = datetime.datetime.now() - user.updated_at
-    print(time_difference.days)
 
     if user.count_query > 35 and time_difference.days <= 1:
         logging.info(f'Превысил лимит пользователь - {message.from_user.username}')
-        await message.answer('🥺 Похоже вы достигли лимита запросов на сегодня, попробуйте через 24 часа😚\n'
+        await message.answer(_('🥺 Похоже вы достигли лимита запросов на сегодня, попробуйте через 24 часа😚\n'
                              '🥸Мы предоставляем самые большие <strong>БЕСПЛАТНЫЕ</strong> лимиты в телеграм\n'
-                             'Но не можем их совсем убрать из за угрозы атаки злоумышленников😞')
+                             'Но не можем их совсем убрать из за угрозы атаки злоумышленников😞'))
         return
     elif time_difference.days >= 1:
         await User.clear_counter(message.from_user.id)
@@ -60,20 +60,20 @@ async def answer_model_base(message: types.Message):
 @rate_limit(3)
 async def buying_apples(call: CallbackQuery):
     await call.answer(cache_time=60)
-    await call.message.edit_text('Подождите...')
+    await call.message.edit_text(_('Подождите...'))
 
     type_refactor, id_msg = call.data.split(':')[2], int(call.data.split(':')[1])
     a = await MessageEdit.select_msg(call.message.from_user.id, id_msg)
     if a is None:
         await call.message.edit_text(
-            '🤔 Похоже вы взаимодействуете со старым сообщением\nПопробуйте задать этот вопрос снова😊')
+            _('🤔 Похоже вы взаимодействуете со старым сообщением\nПопробуйте задать этот вопрос снова😊'))
         return
 
     dict_value = {
-        'short': 'Сделай ответ короче',
-        'long': 'Сделай ответ длиннее',
-        'prof': 'Сделай ответ более проффесиональным',
-        'simple': 'Сделай ответ проще',
+        'short': _('Сделай ответ короче'),
+        'long': _('Сделай ответ длиннее'),
+        'prof': _('Сделай ответ более проффесиональным'),
+        'simple': _('Сделай ответ проще'),
 
     }
     dict_chat_edit = [

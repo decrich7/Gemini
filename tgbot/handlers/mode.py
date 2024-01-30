@@ -18,6 +18,7 @@ from tgbot.services.Gemini_TextInput import main_text_input
 from tgbot.services.Gemini_ChatInput import main_chat_input
 from tgbot.services.db_api.schemas.data import ModePrompt
 from tgbot.services.db_api.schemas.user import User
+from tgbot.services.lang_translate import _
 
 
 # @rate_limit(3, key='chat')
@@ -35,9 +36,9 @@ async def start_model_mode(message: types.Message, state: FSMContext):
 
     if user.count_query > 35 and time_difference.days <= 1:
         logging.info(f'Превысил лимит пользователь - {message.from_user.username}')
-        await message.answer('🥺 Похоже вы достигли лимита запросов на сегодня, попробуйте через 24 часа😚\n'
+        await message.answer(_('🥺 Похоже вы достигли лимита запросов на сегодня, попробуйте через 24 часа😚\n'
                              '🥸Мы предоставляем самые большие <strong>БЕСПЛАТНЫЕ</strong> лимиты в телеграм\n'
-                             'Но не можем их совсем убрать из за угрозы атаки злоумышленников😞')
+                             'Но не можем их совсем убрать из за угрозы атаки злоумышленников😞'))
         return
     elif time_difference.days >= 1:
         await User.clear_counter(message.from_user.id)
@@ -47,7 +48,7 @@ async def start_model_mode(message: types.Message, state: FSMContext):
         await User.add_count_one(message.from_user.id)
 
     list_mode = await ModePrompt.select_all()
-    await message.answer('🦾 Выберите режим в котором будет работать бот:',
+    await message.answer(_('🦾 Выберите режим в котором будет работать бот:'),
                          reply_markup=offers_kb(list_mode, 5))
 
     await Mode.mode.set()
@@ -80,7 +81,7 @@ async def offers_process(call: types.CallbackQuery, state: FSMContext):
 
 async def start_prompt_model(call: CallbackQuery, state: FSMContext):
     await call.message.answer_chat_action(ChatActions.TYPING)
-    await call.message.edit_text(f'Подождите...')
+    await call.message.edit_text(_('Подождите...'))
     list_mode = await ModePrompt.select_all()
 
     # await call.answer(cache_time=60)
@@ -108,7 +109,7 @@ async def start_prompt_model(call: CallbackQuery, state: FSMContext):
     text_model = await main_chat_input(start_prompt, params=params)
 
     await ChatMessages.add_msg(chat_id=id_chat.get('id_chat'), role='model', text=text_model)
-    await call.message.edit_text(f'Режим: <strong>{mode_name}</strong> включен!',
+    await call.message.edit_text(_('Режим: <strong>{mode_name}</strong> включен!').format(mode_name=mode_name),
                                  reply_markup=finish_mode)
 
     # await call.message.answer('Чат завершен')
@@ -142,7 +143,7 @@ async def answer_model_mode(message: types.Message, state: FSMContext):
 
 
 async def finish_mode_callback(call: CallbackQuery, state: FSMContext):
-    await call.answer('Вы вышли из режима')
+    await call.message.answer(_('Вы вышли из режима'))
 
     await call.answer(cache_time=60)
     # await call.message.answer('Чат завершен')

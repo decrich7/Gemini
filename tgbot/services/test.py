@@ -42,45 +42,63 @@ def replace_text(string):
     else:
         return string
 
-    # pattern = r"```.*\n"
-    # replacement = "<pre>\n"
-    #
-    # new_string = re.sub(pattern, replacement, string)
-    # return new_string
+        # pattern = r"```.*\n"
+        # replacement = "<pre>\n"
+        #
+        # new_string = re.sub(pattern, replacement, string)
+        # return new_string
 
+        # from pathlib import Path
+        #
+        # directory = Path('/home/lorehunt/PycharmProjects/Gemini/tgbot')
+        # print(directory)
+        # line_count = 0
+        #
+        # for f in directory.rglob('*.py'):
+        #     if not f.is_file() or not f.exists():
+        #         continue
+        #
+        #     local_count = 0
+        #     for line in f.read_text(encoding='utf-8').splitlines():
+        #         line = line.strip()
+        #         if not line or line.startswith(('#', '"', "'")):
+        #             continue
+        #         local_count += 1
+        #
+        #     print(f'{f} - {local_count} ст')
+        #     line_count += local_count
+        #
+        # print("=====================================")
+        # print(f"all - {line_count}")
+response = {'candidates': [{'content': {'parts': [{'text': '**Доказательство:**\n\n**Шаг 1:**\n\nНачнем с исходного уравнения:\n\n2cos² - 1 = cos² -sin²\n\n**Шаг 2:**\n\nПеренесем все члены в одну сторону уравнения, чтобы получить:\n\n2cos² - cos² = sin² + 1\n\n**Шаг 3:**\n\nУпростим левую часть уравнения:\n\ncos² = sin² + 1\n\n**Шаг 4:**\n\nЗаметим, что sin² + cos² = 1, что является тригонометрическим тождеством. Подставим это тождество в уравнение:\n\ncos² = 1 - cos²\n\n**Шаг 5:**\n\nПеренесем cos² в левую часть уравнения:\n\n2cos² = 1\n\n**Шаг 6:**\n\nРазделим обе части уравнения на 2:\n\ncos² = 1/2\n\n**Шаг 7:**\n\nВозьмем квадратный корень из обеих частей уравнения:\n\ncos = ±√(1/2)\n\n**Шаг 8:**\n\nУпростим выражение под квадратным корнем:\n\ncos = ±√(1/2) = ±(1/√2)\n\n**Шаг 9:**\n\nСгруппируем выражения:\n\ncos = ±(1/√2) = ±(√2/2)\n\n**Шаг 10:**\n\nСледовательно,\n\ncos = √2/2 или cos = -√2/2\n\n**Шаг 11:**\n\nОднако это противоречит исходному уравнению, так как cos не может быть равен как √2/2, так и -√2/2 одновременно.\n\n**Вывод:**\n\nИсходное уравнение 2cos² - 1 = cos² -sin² не имеет действительных решений, следовательно, оно является ложным.'}], 'role': 'model'}, 'finishReason': 'STOP', 'index': 0, 'safetyRatings': [{'category': 'HARM_CATEGORY_SEXUALLY_EXPLICIT', 'probability': 'NEGLIGIBLE'}, {'category': 'HARM_CATEGORY_HATE_SPEECH', 'probability': 'NEGLIGIBLE'}, {'category': 'HARM_CATEGORY_HARASSMENT', 'probability': 'NEGLIGIBLE'}, {'category': 'HARM_CATEGORY_DANGEROUS_CONTENT', 'probability': 'NEGLIGIBLE'}]}], 'promptFeedback': {'safetyRatings': [{'category': 'HARM_CATEGORY_SEXUALLY_EXPLICIT', 'probability': 'NEGLIGIBLE'}, {'category': 'HARM_CATEGORY_HATE_SPEECH', 'probability': 'NEGLIGIBLE'}, {'category': 'HARM_CATEGORY_HARASSMENT', 'probability': 'NEGLIGIBLE'}, {'category': 'HARM_CATEGORY_DANGEROUS_CONTENT', 'probability': 'NEGLIGIBLE'}]}}
 
-# text = '''О, это здорово! Python — отличный язык для программирования. Он очень универсален и прост в изучении. Что ты делаешь на Python?```lalala\ndef sort_array(array):\n  """\n  Сортирует массив по возрастанию.\n\n  Args:\n    array: Массив, который нужно отсортировать.\n\n  Returns:\n    Отсортированный массив.\n  """\n\n  # Проверяем, является ли массив пустым или содержит ли он только один элемент.\n  if len(array) <= 1:\n    return array\n\n  # Выбираем опорный элемент.\n  pivot = array[0]\n\n  # Создаем два пустых списка: один для элементов, меньших опорного, а другой для элементов, больших опорного.\n  left = []\n  right = []\n\n  # Перебираем все элементы массива, начиная со второго.\n  for i in range(1, len(array)):\n    # Если элемент меньше опорного, добавляем его в список меньших элементов.\n    if array[i] < pivot:\n      left.append(array[i])\n    # Иначе добавляем его в список больших элементов.\n    else:\n      right.append(array[i])\n\n  # Рекурсивно сортируем оба списка.\n  left = sort_array(left)\n  right = sort_array(right)\n\n  # Возвращаем отсортированный массив, объединив отсортированные списки меньших и больших элементов и добавив опорный элемент в середину.\n  return left + [pivot] + right\n```'''
-# new_text = replace_text(text)
-# print(new_text)
-from pathlib import Path
+if response.get('candidates'):
 
-directory = Path('/home/lorehunt/PycharmProjects/Gemini/tgbot')
-print(directory)
-line_count = 0
+    finish_reason = response.get('candidates')[0].get('finishReason')
+    print(finish_reason)
+    if finish_reason != 'STOP':
+        if finish_reason == 'SAFETY':
 
-for f in directory.rglob('*.py'):
-    if not f.is_file() or not f.exists():
-        continue
+            print(' Генерация контента была отменена по соображениям безопасности(нарушение политики безопасности)')
+        elif finish_reason == 'MAX_TOKENS':
 
-    local_count = 0
-    for line in f.read_text(encoding='utf-8').splitlines():
-        line = line.strip()
-        if not line or line.startswith(('#', '"', "'")):
-            continue
-        local_count += 1
+            print(' Достигнуто максимальное количество токенов, попробуйте другой запрос ')
 
-    print(f'{f} - {local_count} ст')
-    line_count += local_count
+        elif finish_reason == 'RECITATION':
 
-print("=====================================")
-print(f"all - {line_count}")
-# async def main():
-#     async with aiohttp.ClientSession() as session:
-#         # proxy_auth = aiohttp.BasicAuth('rb3V6g7j', 'Qw9dYird')
-#         async with session.post('https://ipinfo.io', proxy="http://45.147.103.212:8000") as resp:
-#             # f = open('d.txt', 'w')
-#             # f.write(await resp.text())
-#             a = await resp.text()
-#             print(a[:900])
-#
-# asyncio.run(main())
+            print('  Генерация контента была отменена по причине "Цитирования"  ')
+
+        elif finish_reason == 'OTHER':
+
+            print(' Кажется возникла неизвестная ошибка, попробуйте позже ')
+
+        else:
+
+            print(' Кажется возникла ошибка, попробуйте позже ')
+
+    try:
+        string = response['candidates'][0]['content']['parts'][0]['text']
+        print(432543534)
+    except Exception as e:
+
+        print(' Кажется возникла ошибка, попробуйте позже 3534534')

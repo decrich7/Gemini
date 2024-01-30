@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2024-01-29 01:05+0300\n"
-"PO-Revision-Date: 2024-01-29 01:07+0300\n"
+"POT-Creation-Date: 2024-01-29 17:23+0300\n"
+"PO-Revision-Date: 2024-01-29 16:29+0300\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: en\n"
 "Language-Team: en <LL@li.org>\n"
@@ -17,6 +17,130 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.9.1\n"
+
+#: tgbot/handlers/base_mode.py:28 tgbot/handlers/chat_mode.py:38
+#: tgbot/handlers/mode.py:39
+msgid ""
+"🥺 Похоже вы достигли лимита запросов на сегодня, попробуйте через 24 "
+"часа😚\n"
+"🥸Мы предоставляем самые большие <strong>БЕСПЛАТНЫЕ</strong> лимиты в "
+"телеграм\n"
+"Но не можем их совсем убрать из за угрозы атаки злоумышленников😞"
+msgstr ""
+"🥺 Looks like you've reached your request limit for today, try again in "
+"24hour😚\n"
+"🥸We provide the largest <strong>FREE</strong> limits in telegram\n"
+"But we can’t remove them completely due to the threat of attack by "
+"intruders😞"
+
+#: tgbot/handlers/base_mode.py:63 tgbot/handlers/mode.py:84
+msgid "Подождите..."
+msgstr "Wait..."
+
+#: tgbot/handlers/base_mode.py:69
+msgid ""
+"🤔 Похоже вы взаимодействуете со старым сообщением\n"
+"Попробуйте задать этот вопрос снова😊"
+msgstr ""
+"🤔 Looks like you are interacting with an old message\n"
+"Try asking this question again😊"
+
+#: tgbot/handlers/base_mode.py:73
+msgid "Сделай ответ короче"
+msgstr "Make your answer shorter"
+
+#: tgbot/handlers/base_mode.py:74
+msgid "Сделай ответ длиннее"
+msgstr "Make your answer longer"
+
+#: tgbot/handlers/base_mode.py:75
+msgid "Сделай ответ более проффесиональным"
+msgstr "Make your answer more professional"
+
+#: tgbot/handlers/base_mode.py:76
+msgid "Сделай ответ проще"
+msgstr "Make the answer simpler"
+
+#: tgbot/handlers/chat_mode.py:24
+msgid ""
+"Чат уже начат, если вы хотите выйти из режима чата, то нажмите на кнопку "
+"завершить чат"
+msgstr ""
+"The chat has already started, if you want to exit the chat mode, then "
+"click on the \" buttoend chat"
+
+#: tgbot/handlers/chat_mode.py:49
+msgid ""
+"Теперь вы можете отправлять боту сообщения и он будет их запоминать🤓\n"
+"И вести с вами диалог🙃"
+msgstr ""
+"Now you can send messages to the bot and it will remember them🤓\n"
+"And have a dialogue with you🙃"
+
+#: tgbot/handlers/chat_mode.py:89
+msgid "Чат завершен"
+msgstr "Chat ended"
+
+#: tgbot/handlers/error.py:25
+msgid "Произошла внутренняя ошибка, попробуйте позже! "
+msgstr "An internal error occurred, try again later!"
+
+#: tgbot/handlers/error.py:32
+msgid "Длина ответа превышает лимиты Telegram, попробуйте другой запрос"
+msgstr "The length of the response exceeds Telegram limits, try another request"
+
+#: tgbot/handlers/error.py:39 tgbot/handlers/error.py:50
+#: tgbot/handlers/error.py:56 tgbot/handlers/error.py:62
+#: tgbot/handlers/error.py:68
+msgid "Произошла ошибка, попробуйте позже! "
+msgstr "An error occurred, try again later!"
+
+#: tgbot/handlers/error.py:44
+msgid "Произошла ошибка, попробуйте позже!"
+msgstr "An error occurred, try again later!"
+
+#: tgbot/handlers/error.py:76
+msgid "Произошла ошибка c форматированием ответа, попробуйте другой запрос!"
+msgstr "There was an error formatting the response, try another request!"
+
+#: tgbot/handlers/error.py:80
+msgid "Произошла ошибка на стороне Telegram, попробуйте позже! "
+msgstr "An error occurred on the Telegram side, try again later!"
+
+#: tgbot/handlers/error.py:85
+msgid "Произошла ошибка на стороне Telegram, попробуйте позже!"
+msgstr "An error occurred on the Telegram side, try again later!"
+
+#: tgbot/handlers/error.py:90
+msgid "Произошла ошибка с TelegramAPI, попробуйте позже!"
+msgstr "There was an error with the TelegramAPI, try again later!"
+
+#: tgbot/handlers/help.py:23
+msgid ""
+"🆘 Помощь\n"
+"Команды которые я поддерживаю 😎\n"
+"/mode - Выбор Режима бота\n"
+"/chat - Режим чата(бот будет запоминать сообщения)\n"
+"<strong>Если бот перестал отвечать, для перезагрузки нажмите</strong> - "
+"/start"
+msgstr ""
+"🆘 Help\n"
+"Teams I support 😎\n"
+"/mode - Select Bot Mode\n"
+"/chat - Chat mode (the bot will remember messages)\n"
+"<strong>If the bot stops responding, click to reboot</strong> - /start"
+
+#: tgbot/handlers/mode.py:51
+msgid "🦾 Выберите режим в котором будет работать бот:"
+msgstr "🦾 Select the mode in which the bot will work:"
+
+#: tgbot/handlers/mode.py:112
+msgid "Режим: <strong>{mode_name}</strong> включен!"
+msgstr "Mode: <strong>{mode_name}</strong> enabled!"
+
+#: tgbot/handlers/mode.py:146
+msgid "Вы вышли из режима"
+msgstr "You are out of mode"
 
 #: tgbot/handlers/start.py:45
 msgid ""
@@ -40,13 +164,110 @@ msgid ""
 "🌌 Встречай будущее прямо здесь и сейчас! 🌌\n"
 "\n"
 "🤓Чтобы узнать все возможности нажми - /help"
-msgstr "hello"
+msgstr ""
+"🚀 Greetings!\n"
+"\n"
+"<strong>🤖 I AM A COMPLETELY FREE assistant based on the latest Gemini "
+"artificial intelligence from Google</strong>\n"
+"\n"
+"<strong>What I can do:\n"
+"</strong>1. 📄 <i>Writing essays, essays, reports on various themes and in"
+" different styles</i>\n"
+"\n"
+" 2. 🌙 <i>Interpretation of dreams</i>\n"
+"\n"
+" 3. 🔮 <i>Individual astrological forecast and compilation notal map</i>\n"
+"\n"
+" 4. 🤵‍♂ <i>Generating ideas for a startup</i>\n"
+" <strong>And much more!</strong>\n"
+"\n"
+"🌌 Meet the future right here and now! 🌌\n"
+"\n"
+"🤓To find out all the options, click - /help"
 
 #: tgbot/handlers/start.py:46
 msgid "👀 Напиши мне любой вопрос"
-msgstr "yutytdtiyiytd"
+msgstr "👀 Write to me with any question"
 
-#: tgbot/handlers/start.py:58
+#: tgbot/handlers/start.py:47
+msgid "🤔 Выберите язык"
+msgstr "🤔 Select language"
+
+#: tgbot/handlers/start.py:60
 msgid "Ваш язык был изменен"
+msgstr "Your language has been changed"
+
+#: tgbot/keyboards/chat_mode.py:13
+msgid "❎Завершить чат❎"
+msgstr "❎End chat❎"
+
+#: tgbot/keyboards/inline_mode_msg.py:15
+msgid "➡️Короче⬅️"
+msgstr "➡️Shorter⬅️"
+
+#: tgbot/keyboards/inline_mode_msg.py:19
+msgid "⬅️Длиннее➡️"
+msgstr "⬅️Longer➡️"
+
+#: tgbot/keyboards/inline_mode_msg.py:23
+msgid "🤓Профессиональнее🤓"
+msgstr "🤓Professional🤓"
+
+#: tgbot/keyboards/inline_mode_msg.py:27
+msgid "🤷‍♂️Проще🤷‍♂️"
+msgstr "🤷‍♂️Simpler🤷‍♂️"
+
+#: tgbot/keyboards/mode_keyboard.py:18 tgbot/keyboards/mode_keyboard.py:22
+#: tgbot/keyboards/mode_keyboard.py:27 tgbot/keyboards/mode_keyboard.py:33
+msgid "❎Cancel❎"
+msgstr "❎Cancel❎"
+
+#: tgbot/keyboards/mode_keyboard.py:21 tgbot/keyboards/mode_keyboard.py:31
+msgid "⏩Вперед⏩"
+msgstr "⏩Forward⏩"
+
+#: tgbot/keyboards/mode_keyboard.py:26 tgbot/keyboards/mode_keyboard.py:32
+msgid "⏪Назад⏪"
+msgstr "⏪Back⏪"
+
+#: tgbot/services/Gemini_ChatInput.py:74 tgbot/services/Gemini_TextInput.py:77
+msgid ""
+" Генерация контента была отменена по соображениям безопасности(нарушение "
+"политики безопасности)"
 msgstr ""
+" Content generation was canceled due to security reasons (violation "
+"security policies)"
+
+#: tgbot/services/Gemini_ChatInput.py:78 tgbot/services/Gemini_TextInput.py:81
+msgid " Достигнуто максимальное количество токенов, попробуйте другой запрос "
+msgstr "The maximum quantity of tokens has been reached, try another request"
+
+#: tgbot/services/Gemini_ChatInput.py:83 tgbot/services/Gemini_TextInput.py:86
+msgid "  Генерация контента была отменена по причине \"Цитирования\"  "
+msgstr "Content generation was canceled due to \"Quoting\""
+
+#: tgbot/services/Gemini_ChatInput.py:88 tgbot/services/Gemini_TextInput.py:91
+msgid " Кажется возникла неизвестная ошибка, попробуйте позже "
+msgstr "There seems to be an unknown error, try again later"
+
+#: tgbot/services/Gemini_ChatInput.py:93 tgbot/services/Gemini_TextInput.py:96
+#: tgbot/services/Gemini_TextInput.py:126
+#: tgbot/services/Gemini_TextInput.py:130
+#: tgbot/services/Gemini_TextInput.py:147
+msgid " Кажется возникла ошибка, попробуйте позже "
+msgstr "There seems to be an error, try again later"
+
+#: tgbot/services/Gemini_ChatInput.py:125
+#: tgbot/services/Gemini_ChatInput.py:129
+msgid " Кажется возникла ошибка, попробуйте позже или завершите чат"
+msgstr "There seems to be an error, try again later or end the chat"
+
+#: tgbot/services/Gemini_ChatInput.py:134
+#: tgbot/services/Gemini_TextInput.py:142
+msgid " Нарушение политики безопасности, попробуйте другой запрос"
+msgstr "Security policy violation, try another request"
+
+#: tgbot/services/Gemini_ChatInput.py:139
+msgid " Кажется возникла ошибка, попробуйте позже  или завершите чат"
+msgstr "There seems to be an error,  try again later or end the chat"
 

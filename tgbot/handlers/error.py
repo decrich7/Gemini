@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+from tgbot.services.lang_translate import _
 
 import logging
 
@@ -21,50 +22,50 @@ async def errors_handler(update, exception):
                                           CantParseEntities, MessageCantBeDeleted, BadRequest, MessageIsTooLong)
 
     if isinstance(exception, CantDemoteChatCreator):
-        await Update.get_current().message.answer(f'Произошла ошибка, попробуйте позже! CantDemoteChatCreator: {exception.args}')
+        await Update.get_current().message.answer(_('Произошла внутренняя ошибка, попробуйте позже! '))
 
-        logging.debug("Can't demote chat creator")
+        logging.exception(f'CantDemoteChatCreator: {exception} \nUpdate: {update}')
         return True
 
 
     if isinstance(exception, MessageIsTooLong):
-        await Update.get_current().message.answer(f'Длинна ответа превышает лимиты Telegram, попробуйте другой запрос')
+        await Update.get_current().message.answer(_('Длина ответа превышает лимиты Telegram, попробуйте другой запрос'))
 
-        logging.debug('Message is not modified')
+        logging.exception(f'MessageIsTooLong: {exception} \nUpdate: {update}')
 
 
 
     if isinstance(exception, MessageNotModified):
-        await Update.get_current().message.answer(f'Произошла ошибка, попробуйте позже! MessageNotModified: {exception.args}')
+        await Update.get_current().message.answer(_('Произошла ошибка, попробуйте позже! '))
 
-        logging.debug('Message is not modified')
+        logging.exception(f'MessageNotModified: {exception} \nUpdate: {update}')
         return True
     if isinstance(exception, MessageCantBeDeleted):
-        await Update.get_current().message.answer(f'Произошла ошибка, попробуйте позже! MessageCantBeDeleted: {exception.args}')
+        await Update.get_current().message.answer(_('Произошла ошибка, попробуйте позже!'))
 
-        logging.info('Message cant be deleted')
+        logging.exception(f'MessageCantBeDeleted: {exception} \nUpdate: {update}')
         return True
 
     if isinstance(exception, MessageToDeleteNotFound):
-        await Update.get_current().message.answer(f'Произошла ошибка, попробуйте позже! MessageToDeleteNotFound: {exception.args}')
+        await Update.get_current().message.answer(_('Произошла ошибка, попробуйте позже! '))
 
-        logging.info('Message to delete not found')
+        logging.exception(f'MessageToDeleteNotFound: {exception} \nUpdate: {update}')
         return True
 
     if isinstance(exception, MessageTextIsEmpty):
-        await Update.get_current().message.answer(f'Произошла ошибка, попробуйте позже! MessageTextIsEmpty: {exception.args}')
+        await Update.get_current().message.answer(_('Произошла ошибка, попробуйте позже! '))
 
-        logging.debug('MessageTextIsEmpty')
+        logging.exception(f'MessageTextIsEmpty: {exception} \nUpdate: {update}')
         return True
 
     if isinstance(exception, Unauthorized):
-        await Update.get_current().message.answer(f'Произошла ошибка, попробуйте позже! Unauthorized: {exception.args}')
+        await Update.get_current().message.answer(_('Произошла ошибка, попробуйте позже! '))
 
-        logging.info(f'Unauthorized: {exception}')
+        logging.exception(f'Unauthorized: {exception} \nUpdate: {update}')
         return True
 
     if isinstance(exception, InvalidQueryID):
-        await Update.get_current().message.answer(f'Произошла ошибка, попробуйте позже! InvalidQueryID: {exception.args}')
+        await Update.get_current().message.answer(_('Произошла ошибка, попробуйте позже! '))
 
         logging.exception(f'InvalidQueryID: {exception} \nUpdate: {update}')
         return True
@@ -72,21 +73,21 @@ async def errors_handler(update, exception):
     if isinstance(exception, CantParseEntities):
         logging.exception(f'CantParseEntities: {exception} \nUpdate: {update}')
 
-        await Update.get_current().message.answer(f'Произошла ошибка, попробуйте позже! CantParseEntities: {exception.args}')
+        await Update.get_current().message.answer(_('Произошла ошибка c форматированием ответа, попробуйте другой запрос!'))
         return True
 
     if isinstance(exception, RetryAfter):
-        await Update.get_current().message.answer(f'Произошла ошибка, попробуйте позже! RetryAfter: {exception.args}')
+        await Update.get_current().message.answer(_('Произошла ошибка на стороне Telegram, попробуйте позже! '))
 
         logging.exception(f'RetryAfter: {exception} \nUpdate: {update}')
         return True
     if isinstance(exception, BadRequest):
-        await Update.get_current().message.answer(f'Произошла ошибка, попробуйте позже! BadRequest: {exception.args}')
+        await Update.get_current().message.answer(_('Произошла ошибка на стороне Telegram, попробуйте позже!'))
 
         logging.exception(f'BadRequest: {exception} \nUpdate: {update}')
         return True
     if isinstance(exception, TelegramAPIError):
-        await Update.get_current().message.answer(f'Произошла ошибка, попробуйте позже! TelegramAPIError: {exception.args}')
+        await Update.get_current().message.answer(_('Произошла ошибка с TelegramAPI, попробуйте позже!'))
 
         logging.exception(f'TelegramAPIError: {exception} \nUpdate: {update}')
         return True

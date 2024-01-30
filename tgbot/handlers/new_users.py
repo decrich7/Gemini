@@ -3,6 +3,7 @@
 
 from aiogram import Dispatcher
 from aiogram.types import Message
+from tgbot.services.lang_translate import _
 
 from tgbot.services.db_api.schemas.user import User
 

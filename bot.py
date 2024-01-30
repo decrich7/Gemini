@@ -77,7 +77,7 @@ async def main():
     logging.basicConfig(
         level=logging.INFO,
         format=u'%(filename)s:%(lineno)d #%(levelname)-8s [%(asctime)s] - %(name)s - %(message)s',
-        filename="py_log.log"
+        filename="py_log2.log"
     )
     # logging.getLogger('gino.engine._SAEngine').setLevel(logging.ERROR)
 

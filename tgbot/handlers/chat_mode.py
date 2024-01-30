@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 
+from tgbot.services.lang_translate import _
 
 from aiogram import types, Dispatcher
 from aiogram.dispatcher import FSMContext
@@ -20,7 +21,7 @@ from tgbot.services.db_api.schemas.user import User
 
 @rate_limit(3, key='chat')
 async def send_chat_model_chat(message: types.Message):
-    await message.answer('Чат уже начат, если вы хотите выйти из режима чата, то нажмите на кнопку завершить чат',
+    await message.answer(_('Чат уже начат, если вы хотите выйти из режима чата, то нажмите на кнопку завершить чат'),
                          reply_markup=finish_chat)
 
 
@@ -34,9 +35,9 @@ async def start_model_chat(message: types.Message, state: FSMContext):
 
     if user.count_query > 35 and time_difference.days <= 1:
         logging.info(f'Превысил лимит пользователь - {message.from_user.username}')
-        await message.answer('🥺 Похоже вы достигли лимита запросов на сегодня, попробуйте через 24 часа😚\n'
+        await message.answer(_('🥺 Похоже вы достигли лимита запросов на сегодня, попробуйте через 24 часа😚\n'
                              '🥸Мы предоставляем самые большие <strong>БЕСПЛАТНЫЕ</strong> лимиты в телеграм\n'
-                             'Но не можем их совсем убрать из за угрозы атаки злоумышленников😞')
+                             'Но не можем их совсем убрать из за угрозы атаки злоумышленников😞'))
         return
     elif time_difference.days >= 1:
         await User.clear_counter(message.from_user.id)
@@ -45,8 +46,8 @@ async def start_model_chat(message: types.Message, state: FSMContext):
     else:
         await User.add_count_one(message.from_user.id)
 
-    await message.answer('Теперь вы можете отправлять боту сообщения и он будет их запоминать🤓\n'
-                         'И вести с вами диалог🙃',
+    await message.answer(_('Теперь вы можете отправлять боту сообщения и он будет их запоминать🤓\n'
+                         'И вести с вами диалог🙃'),
                          reply_markup=finish_chat)
 
     await ChatMode.chat.set()
@@ -85,7 +86,7 @@ async def answer_model_chat(message: types.Message, state: FSMContext):
 
 async def finish_chat_callback(call: CallbackQuery, state: FSMContext):
     await call.answer(cache_time=60)
-    await call.message.answer('Чат завершен')
+    await call.message.answer(_('Чат завершен'))
     id_chat = await state.get_data()
 
     await Chat.delete_chat(id_chat.get('id_chat'))

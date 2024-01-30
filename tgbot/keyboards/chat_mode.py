@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 
 from aiogram.utils.callback_data import CallbackData
+from tgbot.services.lang_translate import _
 
 from aiogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 
@@ -9,7 +10,7 @@ from aiogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 
 finish_chat = InlineKeyboardMarkup(inline_keyboard=[
     [
-        InlineKeyboardButton(text="❎Завершить чат❎", callback_data='finish_chat')
+        InlineKeyboardButton(text=_("❎Завершить чат❎"), callback_data='finish_chat')
     ]
 ])
 

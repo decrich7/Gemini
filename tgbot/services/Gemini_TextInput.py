@@ -7,7 +7,7 @@ from aiogram.utils.markdown import quote_html
 
 import markdown
 from sulguk import transform_html
-
+from tgbot.services.lang_translate import _
 from tgbot.services.Gemini import BaseAioRequests
 from tgbot.services.db_api import db
 from tgbot.services.db_api.schemas.data import Token, Proxy
@@ -69,31 +69,31 @@ class TextInput(BaseAioRequests):
 
         if response.get('candidates'):
 
-            finish_reason = response.get('candidates')[0].get('content').get('finishReason')
-            if finish_reason:
+            finish_reason = response.get('candidates')[0].get('finishReason')
+            if finish_reason != 'STOP':
                 if finish_reason == 'SAFETY':
                     logging.exception(f'Error TextInput: {finish_reason}')
 
-                    return ' Генерация контента была отменена по соображениям безопасности(нарушение политики безопасности)'
+                    return _(' Генерация контента была отменена по соображениям безопасности(нарушение политики безопасности)')
                 elif finish_reason == 'MAX_TOKENS':
                     logging.exception(f'Error TextInput: {finish_reason}')
 
-                    return ' Достигнуто максимальное количество токенов, попробуйте другой запрос '
+                    return _(' Достигнуто максимальное количество токенов, попробуйте другой запрос ')
 
                 elif finish_reason == 'RECITATION':
                     logging.exception(f'Error TextInput: {finish_reason}')
 
-                    return '  Генерация контента была отменена по причине "Цитирования"  '
+                    return _('  Генерация контента была отменена по причине "Цитирования"  ')
 
                 elif finish_reason == 'OTHER':
                     logging.exception(f'Error TextInput: {finish_reason}')
 
-                    return ' Кажется возникла неизвестная ошибка, попробуйте позже '
+                    return _(' Кажется возникла неизвестная ошибка, попробуйте позже ')
 
                 else:
                     logging.exception(f'Error TextInput: блок else ')
 
-                    return ' Кажется возникла ошибка, попробуйте позже '
+                    return _(' Кажется возникла ошибка, попробуйте позже ')
 
 
 
@@ -123,11 +123,11 @@ class TextInput(BaseAioRequests):
             except Exception as e:
                 logging.exception(f'Error TextInput: {e}')
 
-                return ' Кажется возникла ошибка, попробуйте позже '
+                return _(' Кажется возникла ошибка, попробуйте позже ')
         elif response.get('error'):
             logging.exception(f'Error TextInput: {response.get("error")["message"]}')
 
-            return ' Кажется возникла ошибка, попробуйте позже '
+            return _(' Кажется возникла ошибка, попробуйте позже ')
 
 
 
@@ -139,12 +139,12 @@ class TextInput(BaseAioRequests):
         elif response.get('promptFeedback'):
             logging.exception(f'Нарушение политики безопасности')
 
-            return ' Нарушение политики безопасности, попробуйте другой запрос'
+            return _(' Нарушение политики безопасности, попробуйте другой запрос')
 
         else:
             logging.exception(f'Ошибка TextInput')
 
-            return ' Кажется возникла ошибка, попробуйте позже '
+            return _(' Кажется возникла ошибка, попробуйте позже ')
 
         # try:
         #     # return response['candidates'][0]['content']['parts'][0]['text']

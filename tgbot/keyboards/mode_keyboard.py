@@ -3,6 +3,7 @@
 from aiogram.utils.callback_data import CallbackData
 
 from aiogram.types import InlineKeyboardButton, InlineKeyboardMarkup
+from tgbot.services.lang_translate import _
 
 
 def offers_kb(posts, n):
@@ -14,22 +15,22 @@ def offers_kb(posts, n):
             cur = InlineKeyboardButton(posts[i][-1], callback_data=posts[i][0])
             offers_kb.add(cur)
     if n <= 5 and n >= len(posts):
-        cancel = InlineKeyboardButton("❎Cancel❎", callback_data="cancel_offers")
+        cancel = InlineKeyboardButton(_("❎Cancel❎"), callback_data="cancel_offers")
         offers_kb.row(cancel)
     elif n == 5:
-        forward = InlineKeyboardButton("⏩Вперед⏩", callback_data="forward_offers")
-        cancel = InlineKeyboardButton("❎Cancel❎", callback_data="cancel_offers")
+        forward = InlineKeyboardButton(_("⏩Вперед⏩"), callback_data="forward_offers")
+        cancel = InlineKeyboardButton(_("❎Cancel❎"), callback_data="cancel_offers")
         offers_kb.row(forward)
         offers_kb.row(cancel)
     elif n >= len(posts):
-        back = InlineKeyboardButton("⏪Назад⏪", callback_data="back_offers")
-        cancel = InlineKeyboardButton("❎Cancel❎", callback_data="cancel_offers")
+        back = InlineKeyboardButton(_("⏪Назад⏪"), callback_data="back_offers")
+        cancel = InlineKeyboardButton(_("❎Cancel❎"), callback_data="cancel_offers")
         offers_kb.row(back)
         offers_kb.row(cancel)
     else:
-        forward = InlineKeyboardButton("Вперед", callback_data="forward_offers")
-        back = InlineKeyboardButton("Назад", callback_data="back_offers")
-        cancel = InlineKeyboardButton("Cancel", callback_data="cancel_offers")
+        forward = InlineKeyboardButton(_("⏩Вперед⏩"), callback_data="forward_offers")
+        back = InlineKeyboardButton(_("⏪Назад⏪"), callback_data="back_offers")
+        cancel = InlineKeyboardButton(_("❎Cancel❎"), callback_data="cancel_offers")
         offers_kb.row(back, forward)
         offers_kb.row(cancel)
     return offers_kb
