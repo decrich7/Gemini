@@ -960,3 +960,778 @@ base.py:1234 #INFO     [2024-01-30 00:59:36,148] - gino.engine._SAEngine - SELEC
 FROM users 
 WHERE users.tg_id = $1
 base.py:1236 #INFO     [2024-01-30 00:59:36,148] - gino.engine._SAEngine - (5848440958,)
+dispatcher.py:391 #ERROR    [2024-01-30 07:56:40,768] - aiogram.dispatcher.dispatcher - Cause exception while getting updates.
+Traceback (most recent call last):
+  File "/home/lorehunt/PycharmProjects/Gemini/venv/lib/python3.11/site-packages/aiogram/dispatcher/dispatcher.py", line 382, in start_polling
+    updates = await self.bot.get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/lorehunt/PycharmProjects/Gemini/venv/lib/python3.11/site-packages/aiogram/bot/bot.py", line 110, in get_updates
+    result = await self.request(api.Methods.GET_UPDATES, payload)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/lorehunt/PycharmProjects/Gemini/venv/lib/python3.11/site-packages/aiogram/bot/base.py", line 236, in request
+    return await api.make_request(await self.get_session(), self.server, self.__token, method, data, files,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/lorehunt/PycharmProjects/Gemini/venv/lib/python3.11/site-packages/aiogram/bot/api.py", line 139, in make_request
+    async with session.post(url, data=req, **kwargs) as response:
+  File "/home/lorehunt/PycharmProjects/Gemini/venv/lib64/python3.11/site-packages/aiohttp/client.py", line 1167, in __aenter__
+    self._resp = await self._coro
+                 ^^^^^^^^^^^^^^^^
+  File "/home/lorehunt/PycharmProjects/Gemini/venv/lib64/python3.11/site-packages/aiohttp/client.py", line 586, in _request
+    await resp.start(conn)
+  File "/home/lorehunt/PycharmProjects/Gemini/venv/lib64/python3.11/site-packages/aiohttp/client_reqrep.py", line 900, in start
+    with self._timer:
+  File "/home/lorehunt/PycharmProjects/Gemini/venv/lib64/python3.11/site-packages/aiohttp/helpers.py", line 725, in __exit__
+    raise asyncio.TimeoutError from None
+TimeoutError
+base.py:1234 #INFO     [2024-01-30 07:56:46,310] - gino.engine._SAEngine - SELECT users.id, users.tg_id, users.username, users.is_premium, users.language_code, users.full_name, users.prime, users.referal, users.chat_id, users.count_query, users.created_at, users.updated_at 
+FROM users 
+WHERE users.tg_id = $1
+base.py:1236 #INFO     [2024-01-30 07:56:46,310] - gino.engine._SAEngine - (5051959702,)
+base.py:1234 #INFO     [2024-01-30 07:56:46,311] - gino.engine._SAEngine - SELECT users.id, users.tg_id, users.username, users.is_premium, users.language_code, users.full_name, users.prime, users.referal, users.chat_id, users.count_query, users.created_at, users.updated_at 
+FROM users 
+WHERE users.tg_id = $1
+base.py:1236 #INFO     [2024-01-30 07:56:46,311] - gino.engine._SAEngine - (5051959702,)
+base.py:1234 #INFO     [2024-01-30 07:56:46,312] - gino.engine._SAEngine - SELECT users.id, users.tg_id, users.username, users.is_premium, users.language_code, users.full_name, users.prime, users.referal, users.chat_id, users.count_query, users.created_at, users.updated_at 
+FROM users 
+WHERE users.tg_id = $1
+base.py:1236 #INFO     [2024-01-30 07:56:46,312] - gino.engine._SAEngine - (5051959702,)
+base.py:1234 #INFO     [2024-01-30 07:56:46,312] - gino.engine._SAEngine - SELECT users.id, users.tg_id, users.username, users.is_premium, users.language_code, users.full_name, users.prime, users.referal, users.chat_id, users.count_query, users.created_at, users.updated_at 
+FROM users 
+WHERE users.tg_id = $1
+base.py:1236 #INFO     [2024-01-30 07:56:46,312] - gino.engine._SAEngine - (5051959702,)
+base.py:1234 #INFO     [2024-01-30 07:56:46,313] - gino.engine._SAEngine - SELECT users.id, users.tg_id, users.username, users.is_premium, users.language_code, users.full_name, users.prime, users.referal, users.chat_id, users.count_query, users.created_at, users.updated_at 
+FROM users 
+WHERE users.tg_id = $1
+base.py:1236 #INFO     [2024-01-30 07:56:46,313] - gino.engine._SAEngine - (5051959702,)
+base.py:1234 #INFO     [2024-01-30 07:56:46,313] - gino.engine._SAEngine - SELECT users.id, users.tg_id, users.username, users.is_premium, users.language_code, users.full_name, users.prime, users.referal, users.chat_id, users.count_query, users.created_at, users.updated_at 
+FROM users 
+WHERE users.tg_id = $1
+base.py:1236 #INFO     [2024-01-30 07:56:46,313] - gino.engine._SAEngine - (5051959702,)
+base.py:1234 #INFO     [2024-01-30 07:56:46,314] - gino.engine._SAEngine - SELECT users.id, users.tg_id, users.username, users.is_premium, users.language_code, users.full_name, users.prime, users.referal, users.chat_id, users.count_query, users.created_at, users.updated_at 
+FROM users 
+WHERE users.tg_id = $1
+base.py:1236 #INFO     [2024-01-30 07:56:46,314] - gino.engine._SAEngine - (5051959702,)
+base.py:1234 #INFO     [2024-01-30 07:56:46,314] - gino.engine._SAEngine - SELECT users.id, users.tg_id, users.username, users.is_premium, users.language_code, users.full_name, users.prime, users.referal, users.chat_id, users.count_query, users.created_at, users.updated_at 
+FROM users 
+WHERE users.tg_id = $1
+base.py:1236 #INFO     [2024-01-30 07:56:46,314] - gino.engine._SAEngine - (5051959702,)
+base.py:1234 #INFO     [2024-01-30 07:56:46,314] - gino.engine._SAEngine - SELECT users.id, users.tg_id, users.username, users.is_premium, users.language_code, users.full_name, users.prime, users.referal, users.chat_id, users.count_query, users.created_at, users.updated_at 
+FROM users 
+WHERE users.tg_id = $1
+base.py:1236 #INFO     [2024-01-30 07:56:46,314] - gino.engine._SAEngine - (5051959702,)
+base.py:1234 #INFO     [2024-01-30 07:56:46,315] - gino.engine._SAEngine - SELECT users.id, users.tg_id, users.username, users.is_premium, users.language_code, users.full_name, users.prime, users.referal, users.chat_id, users.count_query, users.created_at, users.updated_at 
+FROM users 
+WHERE users.tg_id = $1
+base.py:1236 #INFO     [2024-01-30 07:56:46,315] - gino.engine._SAEngine - (5051959702,)
+base.py:1234 #INFO     [2024-01-30 07:56:46,317] - gino.engine._SAEngine - SELECT users.id, users.tg_id, users.username, users.is_premium, users.language_code, users.full_name, users.prime, users.referal, users.chat_id, users.count_query, users.created_at, users.updated_at 
+FROM users 
+WHERE users.tg_id = $1
+base.py:1236 #INFO     [2024-01-30 07:56:46,317] - gino.engine._SAEngine - (5346599674,)
+base.py:1234 #INFO     [2024-01-30 07:56:46,318] - gino.engine._SAEngine - SELECT users.id, users.tg_id, users.username, users.is_premium, users.language_code, users.full_name, users.prime, users.referal, users.chat_id, users.count_query, users.created_at, users.updated_at 
+FROM users 
+WHERE users.tg_id = $1
+base.py:1236 #INFO     [2024-01-30 07:56:46,318] - gino.engine._SAEngine - (5346599674,)
+base.py:1234 #INFO     [2024-01-30 07:56:46,319] - gino.engine._SAEngine - INSERT INTO users (tg_id, username, is_premium, language_code, full_name, prime, referal, chat_id, count_query, updated_at) VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, now()) RETURNING users.id, users.tg_id, users.username, users.is_premium, users.language_code, users.full_name, users.prime, users.referal, users.chat_id, users.count_query, users.created_at, users.updated_at
+base.py:1236 #INFO     [2024-01-30 07:56:46,319] - gino.engine._SAEngine - (5051959702, None, None, 'en', 'Rock Pitaz', False, None, 5051959702, 0)
+base.py:769 #INFO     [2024-01-30 07:56:46,319] - gino.engine._SAEngine - COMMIT
+base.py:1234 #INFO     [2024-01-30 07:56:46,330] - gino.engine._SAEngine - INSERT INTO users (tg_id, username, is_premium, language_code, full_name, prime, referal, chat_id, count_query, updated_at) VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, now()) RETURNING users.id, users.tg_id, users.username, users.is_premium, users.language_code, users.full_name, users.prime, users.referal, users.chat_id, users.count_query, users.created_at, users.updated_at
+base.py:1236 #INFO     [2024-01-30 07:56:46,330] - gino.engine._SAEngine - (5346599674, 'Ntshomotho_95', None, 'en', 'iMaX', False, None, 5346599674, 0)
+base.py:769 #INFO     [2024-01-30 07:56:46,330] - gino.engine._SAEngine - COMMIT
+base.py:1234 #INFO     [2024-01-30 07:56:46,556] - gino.engine._SAEngine - SELECT users.id, users.tg_id, users.username, users.is_premium, users.language_code, users.full_name, users.prime, users.referal, users.chat_id, users.count_query, users.created_at, users.updated_at 
+FROM users 
+WHERE users.tg_id = $1
+base.py:1236 #INFO     [2024-01-30 07:56:46,556] - gino.engine._SAEngine - (5051959702,)
+base.py:1234 #INFO     [2024-01-30 07:56:46,560] - gino.engine._SAEngine - UPDATE users SET count_query=(users.count_query + $1), updated_at=now() WHERE users.tg_id = $2
+base.py:1236 #INFO     [2024-01-30 07:56:46,560] - gino.engine._SAEngine - (1, 5051959702)
+base.py:769 #INFO     [2024-01-30 07:56:46,561] - gino.engine._SAEngine - COMMIT
+base.py:1234 #INFO     [2024-01-30 07:56:46,564] - gino.engine._SAEngine - SELECT users.id, users.tg_id, users.username, users.is_premium, users.language_code, users.full_name, users.prime, users.referal, users.chat_id, users.count_query, users.created_at, users.updated_at 
+FROM users 
+WHERE users.tg_id = $1
+base.py:1236 #INFO     [2024-01-30 07:56:46,564] - gino.engine._SAEngine - (5346599674,)
+base.py:1234 #INFO     [2024-01-30 07:56:46,567] - gino.engine._SAEngine - SELECT token.id, token.token, token.email, token.created_at, token.updated_at 
+FROM token
+base.py:1236 #INFO     [2024-01-30 07:56:46,568] - gino.engine._SAEngine - ()
+base.py:1234 #INFO     [2024-01-30 07:56:46,571] - gino.engine._SAEngine - UPDATE users SET count_query=(users.count_query + $1), updated_at=now() WHERE users.tg_id = $2
+base.py:1236 #INFO     [2024-01-30 07:56:46,572] - gino.engine._SAEngine - (1, 5346599674)
+base.py:769 #INFO     [2024-01-30 07:56:46,572] - gino.engine._SAEngine - COMMIT
+base.py:1234 #INFO     [2024-01-30 07:56:46,575] - gino.engine._SAEngine - SELECT proxy.id, proxy.proxy, proxy.login, proxy.password, proxy.created_at, proxy.updated_at 
+FROM proxy
+base.py:1236 #INFO     [2024-01-30 07:56:46,575] - gino.engine._SAEngine - ()
+base.py:1234 #INFO     [2024-01-30 07:56:46,588] - gino.engine._SAEngine - SELECT users.id, users.tg_id, users.username, users.is_premium, users.language_code, users.full_name, users.prime, users.referal, users.chat_id, users.count_query, users.created_at, users.updated_at 
+FROM users 
+WHERE users.tg_id = $1
+base.py:1236 #INFO     [2024-01-30 07:56:46,589] - gino.engine._SAEngine - (5051959702,)
+base.py:1234 #INFO     [2024-01-30 07:56:46,591] - gino.engine._SAEngine - SELECT users.id, users.tg_id, users.username, users.is_premium, users.language_code, users.full_name, users.prime, users.referal, users.chat_id, users.count_query, users.created_at, users.updated_at 
+FROM users 
+WHERE users.tg_id = $1
+base.py:1236 #INFO     [2024-01-30 07:56:46,591] - gino.engine._SAEngine - (5051959702,)
+base.py:1234 #INFO     [2024-01-30 07:56:46,593] - gino.engine._SAEngine - SELECT token.id, token.token, token.email, token.created_at, token.updated_at 
+FROM token
+base.py:1236 #INFO     [2024-01-30 07:56:46,593] - gino.engine._SAEngine - ()
+base.py:1234 #INFO     [2024-01-30 07:56:46,595] - gino.engine._SAEngine - UPDATE users SET count_query=(users.count_query + $1), updated_at=now() WHERE users.tg_id = $2
+base.py:1236 #INFO     [2024-01-30 07:56:46,595] - gino.engine._SAEngine - (1, 5051959702)
+base.py:769 #INFO     [2024-01-30 07:56:46,595] - gino.engine._SAEngine - COMMIT
+base.py:1234 #INFO     [2024-01-30 07:56:46,596] - gino.engine._SAEngine - UPDATE users SET count_query=(users.count_query + $1), updated_at=now() WHERE users.tg_id = $2
+base.py:1236 #INFO     [2024-01-30 07:56:46,597] - gino.engine._SAEngine - (1, 5051959702)
+base.py:769 #INFO     [2024-01-30 07:56:46,597] - gino.engine._SAEngine - COMMIT
+base.py:1234 #INFO     [2024-01-30 07:56:46,598] - gino.engine._SAEngine - SELECT proxy.id, proxy.proxy, proxy.login, proxy.password, proxy.created_at, proxy.updated_at 
+FROM proxy
+base.py:1236 #INFO     [2024-01-30 07:56:46,598] - gino.engine._SAEngine - ()
+base.py:1234 #INFO     [2024-01-30 07:56:46,601] - gino.engine._SAEngine - SELECT prompt.id, prompt.label, prompt.name_mode, prompt.prompt, prompt.created_at, prompt.updated_at 
+FROM prompt
+base.py:1236 #INFO     [2024-01-30 07:56:46,601] - gino.engine._SAEngine - ()
+base.py:1234 #INFO     [2024-01-30 07:56:46,697] - gino.engine._SAEngine - INSERT INTO chats (user_tg_id, updated_at) VALUES ($1, now()) RETURNING chats.id, chats.user_tg_id, chats.created_at, chats.updated_at
+base.py:1236 #INFO     [2024-01-30 07:56:46,698] - gino.engine._SAEngine - (5051959702,)
+base.py:769 #INFO     [2024-01-30 07:56:46,698] - gino.engine._SAEngine - COMMIT
+base.py:1234 #INFO     [2024-01-30 07:56:46,715] - gino.engine._SAEngine - INSERT INTO chats (user_tg_id, updated_at) VALUES ($1, now()) RETURNING chats.id, chats.user_tg_id, chats.created_at, chats.updated_at
+base.py:1236 #INFO     [2024-01-30 07:56:46,715] - gino.engine._SAEngine - (5051959702,)
+base.py:769 #INFO     [2024-01-30 07:56:46,715] - gino.engine._SAEngine - COMMIT
+base.py:1234 #INFO     [2024-01-30 07:56:48,166] - gino.engine._SAEngine - INSERT INTO message_edit (tg_id, msg_id, user_promt, work, updated_at) VALUES ($1, $2, $3, $4, now()) RETURNING message_edit.id, message_edit.tg_id, message_edit.msg_id, message_edit.user_promt, message_edit.work, message_edit.created_at, message_edit.updated_at
+base.py:1236 #INFO     [2024-01-30 07:56:48,166] - gino.engine._SAEngine - (5051959702, 3846, 'Hi', False)
+base.py:769 #INFO     [2024-01-30 07:56:48,166] - gino.engine._SAEngine - COMMIT
+base.py:1234 #INFO     [2024-01-30 07:56:48,408] - gino.engine._SAEngine - INSERT INTO message_edit (tg_id, msg_id, user_promt, work, updated_at) VALUES ($1, $2, $3, $4, now()) RETURNING message_edit.id, message_edit.tg_id, message_edit.msg_id, message_edit.user_promt, message_edit.work, message_edit.created_at, message_edit.updated_at
+base.py:1236 #INFO     [2024-01-30 07:56:48,408] - gino.engine._SAEngine - (5346599674, 3856, 'Hello', False)
+base.py:769 #INFO     [2024-01-30 07:56:48,408] - gino.engine._SAEngine - COMMIT
+base.py:1234 #INFO     [2024-01-30 08:58:26,965] - gino.engine._SAEngine - SELECT users.id, users.tg_id, users.username, users.is_premium, users.language_code, users.full_name, users.prime, users.referal, users.chat_id, users.count_query, users.created_at, users.updated_at 
+FROM users 
+WHERE users.tg_id = $1
+base.py:1236 #INFO     [2024-01-30 08:58:26,966] - gino.engine._SAEngine - (111515892,)
+base.py:1234 #INFO     [2024-01-30 08:58:27,071] - gino.engine._SAEngine - SELECT users.id, users.tg_id, users.username, users.is_premium, users.language_code, users.full_name, users.prime, users.referal, users.chat_id, users.count_query, users.created_at, users.updated_at 
+FROM users 
+WHERE users.tg_id = $1
+base.py:1236 #INFO     [2024-01-30 08:58:27,071] - gino.engine._SAEngine - (111515892,)
+base.py:1234 #INFO     [2024-01-30 08:58:27,075] - gino.engine._SAEngine - UPDATE users SET count_query=(users.count_query + $1), updated_at=now() WHERE users.tg_id = $2
+base.py:1236 #INFO     [2024-01-30 08:58:27,075] - gino.engine._SAEngine - (1, 111515892)
+base.py:769 #INFO     [2024-01-30 08:58:27,076] - gino.engine._SAEngine - COMMIT
+base.py:1234 #INFO     [2024-01-30 08:58:27,081] - gino.engine._SAEngine - SELECT token.id, token.token, token.email, token.created_at, token.updated_at 
+FROM token
+base.py:1236 #INFO     [2024-01-30 08:58:27,082] - gino.engine._SAEngine - ()
+base.py:1234 #INFO     [2024-01-30 08:58:27,086] - gino.engine._SAEngine - SELECT proxy.id, proxy.proxy, proxy.login, proxy.password, proxy.created_at, proxy.updated_at 
+FROM proxy
+base.py:1236 #INFO     [2024-01-30 08:58:27,086] - gino.engine._SAEngine - ()
+base.py:1234 #INFO     [2024-01-30 08:58:33,812] - gino.engine._SAEngine - INSERT INTO message_edit (tg_id, msg_id, user_promt, work, updated_at) VALUES ($1, $2, $3, $4, now()) RETURNING message_edit.id, message_edit.tg_id, message_edit.msg_id, message_edit.user_promt, message_edit.work, message_edit.created_at, message_edit.updated_at
+base.py:1236 #INFO     [2024-01-30 08:58:33,812] - gino.engine._SAEngine - (111515892, 3871, 'give more details about sbellow study:\n\nPulling the plug on brain injury: Manipulating fluid flows could save lives, improve recovery post-TBI\nhtt ... (294 characters truncated) ... surgeons will remove a portion of the skull to relieve pressure, but this has significant risks and is not viable for the vast majority of TBI cases.', False)
+base.py:769 #INFO     [2024-01-30 08:58:33,812] - gino.engine._SAEngine - COMMIT
+base.py:1234 #INFO     [2024-01-30 10:14:58,898] - gino.engine._SAEngine - SELECT users.id, users.tg_id, users.username, users.is_premium, users.language_code, users.full_name, users.prime, users.referal, users.chat_id, users.count_query, users.created_at, users.updated_at 
+FROM users 
+WHERE users.tg_id = $1
+base.py:1236 #INFO     [2024-01-30 10:14:58,898] - gino.engine._SAEngine - (5692355413,)
+base.py:1234 #INFO     [2024-01-30 10:14:58,901] - gino.engine._SAEngine - INSERT INTO users (tg_id, username, is_premium, language_code, full_name, prime, referal, chat_id, count_query, updated_at) VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, now()) RETURNING users.id, users.tg_id, users.username, users.is_premium, users.language_code, users.full_name, users.prime, users.referal, users.chat_id, users.count_query, users.created_at, users.updated_at
+base.py:1236 #INFO     [2024-01-30 10:14:58,901] - gino.engine._SAEngine - (5692355413, None, None, 'ru', 'Лёша Романов', False, None, 5692355413, 0)
+base.py:769 #INFO     [2024-01-30 10:14:58,901] - gino.engine._SAEngine - COMMIT
+base.py:1234 #INFO     [2024-01-30 10:15:01,213] - gino.engine._SAEngine - SELECT users.id, users.tg_id, users.username, users.is_premium, users.language_code, users.full_name, users.prime, users.referal, users.chat_id, users.count_query, users.created_at, users.updated_at 
+FROM users 
+WHERE users.tg_id = $1
+base.py:1236 #INFO     [2024-01-30 10:15:01,214] - gino.engine._SAEngine - (5692355413,)
+base.py:1234 #INFO     [2024-01-30 10:15:01,302] - gino.engine._SAEngine - UPDATE users SET language_code=$1, updated_at=now() WHERE users.tg_id = $2
+base.py:1236 #INFO     [2024-01-30 10:15:01,303] - gino.engine._SAEngine - ('ru', 5692355413)
+base.py:769 #INFO     [2024-01-30 10:15:01,303] - gino.engine._SAEngine - COMMIT
+base.py:1234 #INFO     [2024-01-30 12:03:49,746] - gino.engine._SAEngine - SELECT users.id, users.tg_id, users.username, users.is_premium, users.language_code, users.full_name, users.prime, users.referal, users.chat_id, users.count_query, users.created_at, users.updated_at 
+FROM users 
+WHERE users.tg_id = $1
+base.py:1236 #INFO     [2024-01-30 12:03:49,746] - gino.engine._SAEngine - (5483813580,)
+base.py:1234 #INFO     [2024-01-30 12:03:49,748] - gino.engine._SAEngine - INSERT INTO users (tg_id, username, is_premium, language_code, full_name, prime, referal, chat_id, count_query, updated_at) VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, now()) RETURNING users.id, users.tg_id, users.username, users.is_premium, users.language_code, users.full_name, users.prime, users.referal, users.chat_id, users.count_query, users.created_at, users.updated_at
+base.py:1236 #INFO     [2024-01-30 12:03:49,748] - gino.engine._SAEngine - (5483813580, 'chugun215', None, 'ru', 'СasТ_IrоN🔥', False, None, 5483813580, 0)
+base.py:769 #INFO     [2024-01-30 12:03:49,748] - gino.engine._SAEngine - COMMIT
+base.py:1234 #INFO     [2024-01-30 12:03:52,748] - gino.engine._SAEngine - SELECT users.id, users.tg_id, users.username, users.is_premium, users.language_code, users.full_name, users.prime, users.referal, users.chat_id, users.count_query, users.created_at, users.updated_at 
+FROM users 
+WHERE users.tg_id = $1
+base.py:1236 #INFO     [2024-01-30 12:03:52,748] - gino.engine._SAEngine - (5483813580,)
+base.py:1234 #INFO     [2024-01-30 12:03:52,867] - gino.engine._SAEngine - UPDATE users SET language_code=$1, updated_at=now() WHERE users.tg_id = $2
+base.py:1236 #INFO     [2024-01-30 12:03:52,867] - gino.engine._SAEngine - ('ru', 5483813580)
+base.py:769 #INFO     [2024-01-30 12:03:52,867] - gino.engine._SAEngine - COMMIT
+base.py:1234 #INFO     [2024-01-30 12:04:20,623] - gino.engine._SAEngine - SELECT users.id, users.tg_id, users.username, users.is_premium, users.language_code, users.full_name, users.prime, users.referal, users.chat_id, users.count_query, users.created_at, users.updated_at 
+FROM users 
+WHERE users.tg_id = $1
+base.py:1236 #INFO     [2024-01-30 12:04:20,623] - gino.engine._SAEngine - (5483813580,)
+base.py:1234 #INFO     [2024-01-30 12:04:20,829] - gino.engine._SAEngine - SELECT users.id, users.tg_id, users.username, users.is_premium, users.language_code, users.full_name, users.prime, users.referal, users.chat_id, users.count_query, users.created_at, users.updated_at 
+FROM users 
+WHERE users.tg_id = $1
+base.py:1236 #INFO     [2024-01-30 12:04:20,829] - gino.engine._SAEngine - (5483813580,)
+base.py:1234 #INFO     [2024-01-30 12:04:20,833] - gino.engine._SAEngine - UPDATE users SET count_query=(users.count_query + $1), updated_at=now() WHERE users.tg_id = $2
+base.py:1236 #INFO     [2024-01-30 12:04:20,833] - gino.engine._SAEngine - (1, 5483813580)
+base.py:769 #INFO     [2024-01-30 12:04:20,834] - gino.engine._SAEngine - COMMIT
+base.py:1234 #INFO     [2024-01-30 12:04:20,839] - gino.engine._SAEngine - SELECT token.id, token.token, token.email, token.created_at, token.updated_at 
+FROM token
+base.py:1236 #INFO     [2024-01-30 12:04:20,840] - gino.engine._SAEngine - ()
+base.py:1234 #INFO     [2024-01-30 12:04:20,844] - gino.engine._SAEngine - SELECT proxy.id, proxy.proxy, proxy.login, proxy.password, proxy.created_at, proxy.updated_at 
+FROM proxy
+base.py:1236 #INFO     [2024-01-30 12:04:20,844] - gino.engine._SAEngine - ()
+base.py:1234 #INFO     [2024-01-30 12:04:27,838] - gino.engine._SAEngine - INSERT INTO message_edit (tg_id, msg_id, user_promt, work, updated_at) VALUES ($1, $2, $3, $4, now()) RETURNING message_edit.id, message_edit.tg_id, message_edit.msg_id, message_edit.user_promt, message_edit.work, message_edit.created_at, message_edit.updated_at
+base.py:1236 #INFO     [2024-01-30 12:04:27,838] - gino.engine._SAEngine - (5483813580, 3883, 'В чем похож и не похож Печёрин на Онегина', False)
+base.py:769 #INFO     [2024-01-30 12:04:27,839] - gino.engine._SAEngine - COMMIT
+base.py:1234 #INFO     [2024-01-30 12:05:17,795] - gino.engine._SAEngine - SELECT users.id, users.tg_id, users.username, users.is_premium, users.language_code, users.full_name, users.prime, users.referal, users.chat_id, users.count_query, users.created_at, users.updated_at 
+FROM users 
+WHERE users.tg_id = $1
+base.py:1236 #INFO     [2024-01-30 12:05:17,796] - gino.engine._SAEngine - (5483813580,)
+base.py:1234 #INFO     [2024-01-30 12:05:18,270] - gino.engine._SAEngine - SELECT message_edit.id, message_edit.tg_id, message_edit.msg_id, message_edit.user_promt, message_edit.work, message_edit.created_at, message_edit.updated_at 
+FROM message_edit 
+WHERE message_edit.tg_id = $1 OR message_edit.msg_id = $2
+base.py:1236 #INFO     [2024-01-30 12:05:18,270] - gino.engine._SAEngine - (6686903753, 3883)
+base.py:1234 #INFO     [2024-01-30 12:05:18,275] - gino.engine._SAEngine - SELECT token.id, token.token, token.email, token.created_at, token.updated_at 
+FROM token
+base.py:1236 #INFO     [2024-01-30 12:05:18,275] - gino.engine._SAEngine - ()
+base.py:1234 #INFO     [2024-01-30 12:05:18,278] - gino.engine._SAEngine - SELECT proxy.id, proxy.proxy, proxy.login, proxy.password, proxy.created_at, proxy.updated_at 
+FROM proxy
+base.py:1236 #INFO     [2024-01-30 12:05:18,278] - gino.engine._SAEngine - ()
+base.py:1234 #INFO     [2024-01-30 12:05:26,690] - gino.engine._SAEngine - DELETE FROM message_edit WHERE message_edit.tg_id = $1 OR message_edit.msg_id = $2
+base.py:1236 #INFO     [2024-01-30 12:05:26,690] - gino.engine._SAEngine - (6686903753, 3883)
+base.py:769 #INFO     [2024-01-30 12:05:26,690] - gino.engine._SAEngine - COMMIT
+base.py:1234 #INFO     [2024-01-30 12:07:40,327] - gino.engine._SAEngine - SELECT users.id, users.tg_id, users.username, users.is_premium, users.language_code, users.full_name, users.prime, users.referal, users.chat_id, users.count_query, users.created_at, users.updated_at 
+FROM users 
+WHERE users.tg_id = $1
+base.py:1236 #INFO     [2024-01-30 12:07:40,328] - gino.engine._SAEngine - (5483813580,)
+base.py:1234 #INFO     [2024-01-30 12:07:40,411] - gino.engine._SAEngine - SELECT users.id, users.tg_id, users.username, users.is_premium, users.language_code, users.full_name, users.prime, users.referal, users.chat_id, users.count_query, users.created_at, users.updated_at 
+FROM users 
+WHERE users.tg_id = $1
+base.py:1236 #INFO     [2024-01-30 12:07:40,411] - gino.engine._SAEngine - (5483813580,)
+base.py:1234 #INFO     [2024-01-30 12:07:40,412] - gino.engine._SAEngine - UPDATE users SET count_query=(users.count_query + $1), updated_at=now() WHERE users.tg_id = $2
+base.py:1236 #INFO     [2024-01-30 12:07:40,412] - gino.engine._SAEngine - (1, 5483813580)
+base.py:769 #INFO     [2024-01-30 12:07:40,412] - gino.engine._SAEngine - COMMIT
+base.py:1234 #INFO     [2024-01-30 12:07:40,414] - gino.engine._SAEngine - SELECT token.id, token.token, token.email, token.created_at, token.updated_at 
+FROM token
+base.py:1236 #INFO     [2024-01-30 12:07:40,414] - gino.engine._SAEngine - ()
+base.py:1234 #INFO     [2024-01-30 12:07:40,415] - gino.engine._SAEngine - SELECT proxy.id, proxy.proxy, proxy.login, proxy.password, proxy.created_at, proxy.updated_at 
+FROM proxy
+base.py:1236 #INFO     [2024-01-30 12:07:40,415] - gino.engine._SAEngine - ()
+base.py:1234 #INFO     [2024-01-30 12:07:47,385] - gino.engine._SAEngine - INSERT INTO message_edit (tg_id, msg_id, user_promt, work, updated_at) VALUES ($1, $2, $3, $4, now()) RETURNING message_edit.id, message_edit.tg_id, message_edit.msg_id, message_edit.user_promt, message_edit.work, message_edit.created_at, message_edit.updated_at
+base.py:1236 #INFO     [2024-01-30 12:07:47,385] - gino.engine._SAEngine - (5483813580, 3885, 'В чем похож и не похож Печёрин на Онегина', False)
+base.py:769 #INFO     [2024-01-30 12:07:47,385] - gino.engine._SAEngine - COMMIT
+base.py:1234 #INFO     [2024-01-30 12:14:41,811] - gino.engine._SAEngine - SELECT users.id, users.tg_id, users.username, users.is_premium, users.language_code, users.full_name, users.prime, users.referal, users.chat_id, users.count_query, users.created_at, users.updated_at 
+FROM users 
+WHERE users.tg_id = $1
+base.py:1236 #INFO     [2024-01-30 12:14:41,812] - gino.engine._SAEngine - (6384646325,)
+base.py:1234 #INFO     [2024-01-30 12:14:41,814] - gino.engine._SAEngine - INSERT INTO users (tg_id, username, is_premium, language_code, full_name, prime, referal, chat_id, count_query, updated_at) VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, now()) RETURNING users.id, users.tg_id, users.username, users.is_premium, users.language_code, users.full_name, users.prime, users.referal, users.chat_id, users.count_query, users.created_at, users.updated_at
+base.py:1236 #INFO     [2024-01-30 12:14:41,814] - gino.engine._SAEngine - (6384646325, 'nit_parfait', None, 'en', 'Nit_parfait 𓃵', False, None, 6384646325, 0)
+base.py:769 #INFO     [2024-01-30 12:14:41,814] - gino.engine._SAEngine - COMMIT
+base.py:1234 #INFO     [2024-01-30 12:14:45,772] - gino.engine._SAEngine - SELECT users.id, users.tg_id, users.username, users.is_premium, users.language_code, users.full_name, users.prime, users.referal, users.chat_id, users.count_query, users.created_at, users.updated_at 
+FROM users 
+WHERE users.tg_id = $1
+base.py:1236 #INFO     [2024-01-30 12:14:45,772] - gino.engine._SAEngine - (6384646325,)
+base.py:1234 #INFO     [2024-01-30 12:14:45,852] - gino.engine._SAEngine - UPDATE users SET language_code=$1, updated_at=now() WHERE users.tg_id = $2
+base.py:1236 #INFO     [2024-01-30 12:14:45,852] - gino.engine._SAEngine - ('en', 6384646325)
+base.py:769 #INFO     [2024-01-30 12:14:45,853] - gino.engine._SAEngine - COMMIT
+base.py:1234 #INFO     [2024-01-30 12:15:11,219] - gino.engine._SAEngine - SELECT users.id, users.tg_id, users.username, users.is_premium, users.language_code, users.full_name, users.prime, users.referal, users.chat_id, users.count_query, users.created_at, users.updated_at 
+FROM users 
+WHERE users.tg_id = $1
+base.py:1236 #INFO     [2024-01-30 12:15:11,219] - gino.engine._SAEngine - (6384646325,)
+base.py:1234 #INFO     [2024-01-30 12:15:26,131] - gino.engine._SAEngine - SELECT users.id, users.tg_id, users.username, users.is_premium, users.language_code, users.full_name, users.prime, users.referal, users.chat_id, users.count_query, users.created_at, users.updated_at 
+FROM users 
+WHERE users.tg_id = $1
+base.py:1236 #INFO     [2024-01-30 12:15:26,131] - gino.engine._SAEngine - (6384646325,)
+base.py:1234 #INFO     [2024-01-30 12:15:26,237] - gino.engine._SAEngine - SELECT users.id, users.tg_id, users.username, users.is_premium, users.language_code, users.full_name, users.prime, users.referal, users.chat_id, users.count_query, users.created_at, users.updated_at 
+FROM users 
+WHERE users.tg_id = $1
+base.py:1236 #INFO     [2024-01-30 12:15:26,237] - gino.engine._SAEngine - (6384646325,)
+base.py:1234 #INFO     [2024-01-30 12:15:26,241] - gino.engine._SAEngine - UPDATE users SET count_query=(users.count_query + $1), updated_at=now() WHERE users.tg_id = $2
+base.py:1236 #INFO     [2024-01-30 12:15:26,242] - gino.engine._SAEngine - (1, 6384646325)
+base.py:769 #INFO     [2024-01-30 12:15:26,242] - gino.engine._SAEngine - COMMIT
+base.py:1234 #INFO     [2024-01-30 12:15:26,247] - gino.engine._SAEngine - SELECT token.id, token.token, token.email, token.created_at, token.updated_at 
+FROM token
+base.py:1236 #INFO     [2024-01-30 12:15:26,247] - gino.engine._SAEngine - ()
+base.py:1234 #INFO     [2024-01-30 12:15:26,251] - gino.engine._SAEngine - SELECT proxy.id, proxy.proxy, proxy.login, proxy.password, proxy.created_at, proxy.updated_at 
+FROM proxy
+base.py:1236 #INFO     [2024-01-30 12:15:26,252] - gino.engine._SAEngine - ()
+base.py:1234 #INFO     [2024-01-30 12:15:28,452] - gino.engine._SAEngine - INSERT INTO message_edit (tg_id, msg_id, user_promt, work, updated_at) VALUES ($1, $2, $3, $4, now()) RETURNING message_edit.id, message_edit.tg_id, message_edit.msg_id, message_edit.user_promt, message_edit.work, message_edit.created_at, message_edit.updated_at
+base.py:1236 #INFO     [2024-01-30 12:15:28,452] - gino.engine._SAEngine - (6384646325, 3893, 'What is this?', False)
+base.py:769 #INFO     [2024-01-30 12:15:28,452] - gino.engine._SAEngine - COMMIT
+base.py:1234 #INFO     [2024-01-30 12:15:51,630] - gino.engine._SAEngine - SELECT users.id, users.tg_id, users.username, users.is_premium, users.language_code, users.full_name, users.prime, users.referal, users.chat_id, users.count_query, users.created_at, users.updated_at 
+FROM users 
+WHERE users.tg_id = $1
+base.py:1236 #INFO     [2024-01-30 12:15:51,630] - gino.engine._SAEngine - (6384646325,)
+base.py:1234 #INFO     [2024-01-30 12:15:51,805] - gino.engine._SAEngine - SELECT message_edit.id, message_edit.tg_id, message_edit.msg_id, message_edit.user_promt, message_edit.work, message_edit.created_at, message_edit.updated_at 
+FROM message_edit 
+WHERE message_edit.tg_id = $1 OR message_edit.msg_id = $2
+base.py:1236 #INFO     [2024-01-30 12:15:51,805] - gino.engine._SAEngine - (6686903753, 3893)
+base.py:1234 #INFO     [2024-01-30 12:15:51,811] - gino.engine._SAEngine - SELECT token.id, token.token, token.email, token.created_at, token.updated_at 
+FROM token
+base.py:1236 #INFO     [2024-01-30 12:15:51,811] - gino.engine._SAEngine - ()
+base.py:1234 #INFO     [2024-01-30 12:15:51,814] - gino.engine._SAEngine - SELECT proxy.id, proxy.proxy, proxy.login, proxy.password, proxy.created_at, proxy.updated_at 
+FROM proxy
+base.py:1236 #INFO     [2024-01-30 12:15:51,815] - gino.engine._SAEngine - ()
+base.py:1234 #INFO     [2024-01-30 12:15:55,234] - gino.engine._SAEngine - DELETE FROM message_edit WHERE message_edit.tg_id = $1 OR message_edit.msg_id = $2
+base.py:1236 #INFO     [2024-01-30 12:15:55,234] - gino.engine._SAEngine - (6686903753, 3893)
+base.py:769 #INFO     [2024-01-30 12:15:55,234] - gino.engine._SAEngine - COMMIT
+base.py:1234 #INFO     [2024-01-30 12:16:32,258] - gino.engine._SAEngine - SELECT users.id, users.tg_id, users.username, users.is_premium, users.language_code, users.full_name, users.prime, users.referal, users.chat_id, users.count_query, users.created_at, users.updated_at 
+FROM users 
+WHERE users.tg_id = $1
+base.py:1236 #INFO     [2024-01-30 12:16:32,258] - gino.engine._SAEngine - (6384646325,)
+base.py:1234 #INFO     [2024-01-30 12:17:42,949] - gino.engine._SAEngine - SELECT users.id, users.tg_id, users.username, users.is_premium, users.language_code, users.full_name, users.prime, users.referal, users.chat_id, users.count_query, users.created_at, users.updated_at 
+FROM users 
+WHERE users.tg_id = $1
+base.py:1236 #INFO     [2024-01-30 12:17:42,949] - gino.engine._SAEngine - (6384646325,)
+base.py:1234 #INFO     [2024-01-30 12:17:43,028] - gino.engine._SAEngine - SELECT users.id, users.tg_id, users.username, users.is_premium, users.language_code, users.full_name, users.prime, users.referal, users.chat_id, users.count_query, users.created_at, users.updated_at 
+FROM users 
+WHERE users.tg_id = $1
+base.py:1236 #INFO     [2024-01-30 12:17:43,029] - gino.engine._SAEngine - (6384646325,)
+base.py:1234 #INFO     [2024-01-30 12:17:43,033] - gino.engine._SAEngine - UPDATE users SET count_query=(users.count_query + $1), updated_at=now() WHERE users.tg_id = $2
+base.py:1236 #INFO     [2024-01-30 12:17:43,033] - gino.engine._SAEngine - (1, 6384646325)
+base.py:769 #INFO     [2024-01-30 12:17:43,033] - gino.engine._SAEngine - COMMIT
+base.py:1234 #INFO     [2024-01-30 12:17:43,038] - gino.engine._SAEngine - SELECT token.id, token.token, token.email, token.created_at, token.updated_at 
+FROM token
+base.py:1236 #INFO     [2024-01-30 12:17:43,038] - gino.engine._SAEngine - ()
+base.py:1234 #INFO     [2024-01-30 12:17:43,041] - gino.engine._SAEngine - SELECT proxy.id, proxy.proxy, proxy.login, proxy.password, proxy.created_at, proxy.updated_at 
+FROM proxy
+base.py:1236 #INFO     [2024-01-30 12:17:43,041] - gino.engine._SAEngine - ()
+base.py:1234 #INFO     [2024-01-30 12:17:44,474] - gino.engine._SAEngine - INSERT INTO message_edit (tg_id, msg_id, user_promt, work, updated_at) VALUES ($1, $2, $3, $4, now()) RETURNING message_edit.id, message_edit.tg_id, message_edit.msg_id, message_edit.user_promt, message_edit.work, message_edit.created_at, message_edit.updated_at
+base.py:1236 #INFO     [2024-01-30 12:17:44,475] - gino.engine._SAEngine - (6384646325, 3896, '?', False)
+base.py:769 #INFO     [2024-01-30 12:17:44,475] - gino.engine._SAEngine - COMMIT
+base.py:1234 #INFO     [2024-01-30 12:17:47,363] - gino.engine._SAEngine - SELECT users.id, users.tg_id, users.username, users.is_premium, users.language_code, users.full_name, users.prime, users.referal, users.chat_id, users.count_query, users.created_at, users.updated_at 
+FROM users 
+WHERE users.tg_id = $1
+base.py:1236 #INFO     [2024-01-30 12:17:47,364] - gino.engine._SAEngine - (6384646325,)
+base.py:1234 #INFO     [2024-01-30 12:17:47,529] - gino.engine._SAEngine - SELECT message_edit.id, message_edit.tg_id, message_edit.msg_id, message_edit.user_promt, message_edit.work, message_edit.created_at, message_edit.updated_at 
+FROM message_edit 
+WHERE message_edit.tg_id = $1 OR message_edit.msg_id = $2
+base.py:1236 #INFO     [2024-01-30 12:17:47,530] - gino.engine._SAEngine - (6686903753, 3896)
+base.py:1234 #INFO     [2024-01-30 12:17:47,533] - gino.engine._SAEngine - SELECT token.id, token.token, token.email, token.created_at, token.updated_at 
+FROM token
+base.py:1236 #INFO     [2024-01-30 12:17:47,533] - gino.engine._SAEngine - ()
+base.py:1234 #INFO     [2024-01-30 12:17:47,536] - gino.engine._SAEngine - SELECT proxy.id, proxy.proxy, proxy.login, proxy.password, proxy.created_at, proxy.updated_at 
+FROM proxy
+base.py:1236 #INFO     [2024-01-30 12:17:47,537] - gino.engine._SAEngine - ()
+base.py:1234 #INFO     [2024-01-30 12:17:50,869] - gino.engine._SAEngine - DELETE FROM message_edit WHERE message_edit.tg_id = $1 OR message_edit.msg_id = $2
+base.py:1236 #INFO     [2024-01-30 12:17:50,869] - gino.engine._SAEngine - (6686903753, 3896)
+base.py:769 #INFO     [2024-01-30 12:17:50,869] - gino.engine._SAEngine - COMMIT
+bot.py:84 #INFO     [2024-01-30 14:43:36,644] - __main__ - Starting bot
+base.py:454 #INFO     [2024-01-30 14:43:37,290] - apscheduler.scheduler - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+base.py:454 #INFO     [2024-01-30 14:43:37,290] - apscheduler.scheduler - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+base.py:895 #INFO     [2024-01-30 14:43:37,290] - apscheduler.scheduler - Added job "clean_message_edit" to job store "default"
+base.py:895 #INFO     [2024-01-30 14:43:37,290] - apscheduler.scheduler - Added job "clean_chats_and_msg_chats" to job store "default"
+base.py:181 #INFO     [2024-01-30 14:43:37,290] - apscheduler.scheduler - Scheduler started
+dispatcher.py:359 #INFO     [2024-01-30 14:43:37,500] - aiogram.dispatcher.dispatcher - Start polling.
+base.py:1234 #INFO     [2024-01-30 14:43:50,388] - gino.engine._SAEngine - SELECT users.id, users.tg_id, users.username, users.is_premium, users.language_code, users.full_name, users.prime, users.referal, users.chat_id, users.count_query, users.created_at, users.updated_at 
+FROM users 
+WHERE users.tg_id = $1
+base.py:1236 #INFO     [2024-01-30 14:43:50,388] - gino.engine._SAEngine - (778981429,)
+base.py:1234 #INFO     [2024-01-30 14:43:50,403] - gino.engine._SAEngine - SELECT users.id, users.tg_id, users.username, users.is_premium, users.language_code, users.full_name, users.prime, users.referal, users.chat_id, users.count_query, users.created_at, users.updated_at 
+FROM users
+base.py:1236 #INFO     [2024-01-30 14:43:50,403] - gino.engine._SAEngine - ()
+base.py:1234 #INFO     [2024-01-30 14:45:31,166] - gino.engine._SAEngine - SELECT users.id, users.tg_id, users.username, users.is_premium, users.language_code, users.full_name, users.prime, users.referal, users.chat_id, users.count_query, users.created_at, users.updated_at 
+FROM users 
+WHERE users.tg_id = $1
+base.py:1236 #INFO     [2024-01-30 14:45:31,166] - gino.engine._SAEngine - (778981429,)
+base.py:1234 #INFO     [2024-01-30 14:45:31,168] - gino.engine._SAEngine - SELECT users.id, users.tg_id, users.username, users.is_premium, users.language_code, users.full_name, users.prime, users.referal, users.chat_id, users.count_query, users.created_at, users.updated_at 
+FROM users
+base.py:1236 #INFO     [2024-01-30 14:45:31,168] - gino.engine._SAEngine - ()
+bot.py:84 #INFO     [2024-01-30 20:03:23,140] - __main__ - Starting bot
+base.py:454 #INFO     [2024-01-30 20:03:23,821] - apscheduler.scheduler - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+base.py:454 #INFO     [2024-01-30 20:03:23,821] - apscheduler.scheduler - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+base.py:895 #INFO     [2024-01-30 20:03:23,822] - apscheduler.scheduler - Added job "clean_message_edit" to job store "default"
+base.py:895 #INFO     [2024-01-30 20:03:23,822] - apscheduler.scheduler - Added job "clean_chats_and_msg_chats" to job store "default"
+base.py:181 #INFO     [2024-01-30 20:03:23,822] - apscheduler.scheduler - Scheduler started
+dispatcher.py:359 #INFO     [2024-01-30 20:03:24,000] - aiogram.dispatcher.dispatcher - Start polling.
+base.py:1234 #INFO     [2024-01-30 20:03:30,532] - gino.engine._SAEngine - SELECT users.id, users.tg_id, users.username, users.is_premium, users.language_code, users.full_name, users.prime, users.referal, users.chat_id, users.count_query, users.created_at, users.updated_at 
+FROM users 
+WHERE users.tg_id = $1
+base.py:1236 #INFO     [2024-01-30 20:03:30,532] - gino.engine._SAEngine - (778981429,)
+base.py:1234 #INFO     [2024-01-30 20:03:30,548] - gino.engine._SAEngine - SELECT users.id, users.tg_id, users.username, users.is_premium, users.language_code, users.full_name, users.prime, users.referal, users.chat_id, users.count_query, users.created_at, users.updated_at 
+FROM users
+base.py:1236 #INFO     [2024-01-30 20:03:30,548] - gino.engine._SAEngine - ()
+dispatcher.py:408 #WARNING  [2024-01-30 20:09:08,294] - aiogram.dispatcher.dispatcher - Polling is stopped.
+dispatcher.py:436 #INFO     [2024-01-30 20:09:08,328] - aiogram.dispatcher.dispatcher - Stop polling...
+bot.py:84 #INFO     [2024-01-30 20:09:09,013] - __main__ - Starting bot
+base.py:454 #INFO     [2024-01-30 20:09:09,782] - apscheduler.scheduler - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+base.py:454 #INFO     [2024-01-30 20:09:09,782] - apscheduler.scheduler - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+base.py:895 #INFO     [2024-01-30 20:09:09,783] - apscheduler.scheduler - Added job "clean_message_edit" to job store "default"
+base.py:895 #INFO     [2024-01-30 20:09:09,783] - apscheduler.scheduler - Added job "clean_chats_and_msg_chats" to job store "default"
+base.py:181 #INFO     [2024-01-30 20:09:09,784] - apscheduler.scheduler - Scheduler started
+dispatcher.py:359 #INFO     [2024-01-30 20:09:09,883] - aiogram.dispatcher.dispatcher - Start polling.
+base.py:1234 #INFO     [2024-01-30 20:09:17,651] - gino.engine._SAEngine - SELECT users.id, users.tg_id, users.username, users.is_premium, users.language_code, users.full_name, users.prime, users.referal, users.chat_id, users.count_query, users.created_at, users.updated_at 
+FROM users 
+WHERE users.tg_id = $1
+base.py:1236 #INFO     [2024-01-30 20:09:17,652] - gino.engine._SAEngine - (778981429,)
+base.py:1234 #INFO     [2024-01-30 20:09:18,059] - gino.engine._SAEngine - SELECT users.id, users.tg_id, users.username, users.is_premium, users.language_code, users.full_name, users.prime, users.referal, users.chat_id, users.count_query, users.created_at, users.updated_at 
+FROM users 
+WHERE users.tg_id = $1
+base.py:1236 #INFO     [2024-01-30 20:09:18,059] - gino.engine._SAEngine - (778981429,)
+base.py:1234 #INFO     [2024-01-30 20:09:18,064] - gino.engine._SAEngine - UPDATE users SET count_query=$1, updated_at=now() WHERE users.tg_id = $2
+base.py:1236 #INFO     [2024-01-30 20:09:18,064] - gino.engine._SAEngine - (0, 778981429)
+base.py:769 #INFO     [2024-01-30 20:09:18,064] - gino.engine._SAEngine - COMMIT
+base.py:1234 #INFO     [2024-01-30 20:09:18,070] - gino.engine._SAEngine - UPDATE users SET count_query=(users.count_query + $1), updated_at=now() WHERE users.tg_id = $2
+base.py:1236 #INFO     [2024-01-30 20:09:18,070] - gino.engine._SAEngine - (1, 778981429)
+base.py:769 #INFO     [2024-01-30 20:09:18,070] - gino.engine._SAEngine - COMMIT
+base.py:1234 #INFO     [2024-01-30 20:09:18,077] - gino.engine._SAEngine - SELECT token.id, token.token, token.email, token.created_at, token.updated_at 
+FROM token
+base.py:1236 #INFO     [2024-01-30 20:09:18,077] - gino.engine._SAEngine - ()
+base.py:1234 #INFO     [2024-01-30 20:09:18,081] - gino.engine._SAEngine - SELECT proxy.id, proxy.proxy, proxy.login, proxy.password, proxy.created_at, proxy.updated_at 
+FROM proxy
+base.py:1236 #INFO     [2024-01-30 20:09:18,081] - gino.engine._SAEngine - ()
+base.py:1234 #INFO     [2024-01-30 20:09:19,756] - gino.engine._SAEngine - INSERT INTO message_edit (tg_id, msg_id, user_promt, work, updated_at) VALUES ($1, $2, $3, $4, now()) RETURNING message_edit.id, message_edit.tg_id, message_edit.msg_id, message_edit.user_promt, message_edit.work, message_edit.created_at, message_edit.updated_at
+base.py:1236 #INFO     [2024-01-30 20:09:19,764] - gino.engine._SAEngine - (778981429, 3908, 'hello', False)
+base.py:769 #INFO     [2024-01-30 20:09:19,764] - gino.engine._SAEngine - COMMIT
+error.py:87 #ERROR    [2024-01-30 20:09:20,011] - root - BadRequest: Message can't be edited 
+Update: {"update_id": 734372097, "message": {"message_id": 3908, "from": {"id": 778981429, "is_bot": false, "first_name": "Decrich", "username": "Decrich", "language_code": "ru"}, "chat": {"id": 778981429, "first_name": "Decrich", "username": "Decrich", "type": "private"}, "date": 1706634557, "text": "hello"}}
+Traceback (most recent call last):
+  File "/home/lorehunt/PycharmProjects/Gemini/venv/lib/python3.11/site-packages/aiogram/dispatcher/dispatcher.py", line 257, in process_update
+    return await self.message_handlers.notify(update.message)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/lorehunt/PycharmProjects/Gemini/venv/lib/python3.11/site-packages/aiogram/dispatcher/handler.py", line 117, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/lorehunt/PycharmProjects/Gemini/tgbot/handlers/base_mode.py", line 56, in answer_model_base
+    await message.edit_text(text,
+  File "/home/lorehunt/PycharmProjects/Gemini/venv/lib/python3.11/site-packages/aiogram/types/message.py", line 2919, in edit_text
+    return await self.bot.edit_message_text(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/lorehunt/PycharmProjects/Gemini/venv/lib/python3.11/site-packages/aiogram/bot/bot.py", line 3122, in edit_message_text
+    result = await self.request(api.Methods.EDIT_MESSAGE_TEXT, payload)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/lorehunt/PycharmProjects/Gemini/venv/lib/python3.11/site-packages/aiogram/bot/base.py", line 236, in request
+    return await api.make_request(await self.get_session(), self.server, self.__token, method, data, files,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/lorehunt/PycharmProjects/Gemini/venv/lib/python3.11/site-packages/aiogram/bot/api.py", line 140, in make_request
+    return check_result(method, response.content_type, response.status, await response.text())
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/lorehunt/PycharmProjects/Gemini/venv/lib/python3.11/site-packages/aiogram/bot/api.py", line 115, in check_result
+    exceptions.BadRequest.detect(description)
+  File "/home/lorehunt/PycharmProjects/Gemini/venv/lib/python3.11/site-packages/aiogram/utils/exceptions.py", line 140, in detect
+    raise err(cls.text or description)
+aiogram.utils.exceptions.MessageCantBeEdited: Message can't be edited
+dispatcher.py:408 #WARNING  [2024-01-30 20:09:47,373] - aiogram.dispatcher.dispatcher - Polling is stopped.
+dispatcher.py:436 #INFO     [2024-01-30 20:09:47,441] - aiogram.dispatcher.dispatcher - Stop polling...
+bot.py:84 #INFO     [2024-01-30 20:09:48,055] - __main__ - Starting bot
+base.py:454 #INFO     [2024-01-30 20:09:48,737] - apscheduler.scheduler - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+base.py:454 #INFO     [2024-01-30 20:09:48,737] - apscheduler.scheduler - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+base.py:895 #INFO     [2024-01-30 20:09:48,738] - apscheduler.scheduler - Added job "clean_message_edit" to job store "default"
+base.py:895 #INFO     [2024-01-30 20:09:48,738] - apscheduler.scheduler - Added job "clean_chats_and_msg_chats" to job store "default"
+base.py:181 #INFO     [2024-01-30 20:09:48,738] - apscheduler.scheduler - Scheduler started
+dispatcher.py:359 #INFO     [2024-01-30 20:09:48,885] - aiogram.dispatcher.dispatcher - Start polling.
+base.py:1234 #INFO     [2024-01-30 20:09:54,736] - gino.engine._SAEngine - SELECT users.id, users.tg_id, users.username, users.is_premium, users.language_code, users.full_name, users.prime, users.referal, users.chat_id, users.count_query, users.created_at, users.updated_at 
+FROM users 
+WHERE users.tg_id = $1
+base.py:1236 #INFO     [2024-01-30 20:09:54,736] - gino.engine._SAEngine - (778981429,)
+base.py:1234 #INFO     [2024-01-30 20:09:54,950] - gino.engine._SAEngine - SELECT users.id, users.tg_id, users.username, users.is_premium, users.language_code, users.full_name, users.prime, users.referal, users.chat_id, users.count_query, users.created_at, users.updated_at 
+FROM users 
+WHERE users.tg_id = $1
+base.py:1236 #INFO     [2024-01-30 20:09:54,950] - gino.engine._SAEngine - (778981429,)
+base.py:1234 #INFO     [2024-01-30 20:09:54,952] - gino.engine._SAEngine - UPDATE users SET count_query=(users.count_query + $1), updated_at=now() WHERE users.tg_id = $2
+base.py:1236 #INFO     [2024-01-30 20:09:54,952] - gino.engine._SAEngine - (1, 778981429)
+base.py:769 #INFO     [2024-01-30 20:09:54,952] - gino.engine._SAEngine - COMMIT
+base.py:1234 #INFO     [2024-01-30 20:09:54,956] - gino.engine._SAEngine - SELECT token.id, token.token, token.email, token.created_at, token.updated_at 
+FROM token
+base.py:1236 #INFO     [2024-01-30 20:09:54,957] - gino.engine._SAEngine - ()
+base.py:1234 #INFO     [2024-01-30 20:09:54,963] - gino.engine._SAEngine - SELECT proxy.id, proxy.proxy, proxy.login, proxy.password, proxy.created_at, proxy.updated_at 
+FROM proxy
+base.py:1236 #INFO     [2024-01-30 20:09:54,963] - gino.engine._SAEngine - ()
+base.py:1234 #INFO     [2024-01-30 20:09:56,483] - gino.engine._SAEngine - INSERT INTO message_edit (tg_id, msg_id, user_promt, work, updated_at) VALUES ($1, $2, $3, $4, now()) RETURNING message_edit.id, message_edit.tg_id, message_edit.msg_id, message_edit.user_promt, message_edit.work, message_edit.created_at, message_edit.updated_at
+base.py:1236 #INFO     [2024-01-30 20:09:56,483] - gino.engine._SAEngine - (778981429, 3911, 'hello', False)
+base.py:769 #INFO     [2024-01-30 20:09:56,483] - gino.engine._SAEngine - COMMIT
+dispatcher.py:408 #WARNING  [2024-01-30 20:13:53,989] - aiogram.dispatcher.dispatcher - Polling is stopped.
+dispatcher.py:436 #INFO     [2024-01-30 20:13:54,029] - aiogram.dispatcher.dispatcher - Stop polling...
+bot.py:84 #INFO     [2024-01-30 20:13:54,534] - __main__ - Starting bot
+base.py:454 #INFO     [2024-01-30 20:13:55,122] - apscheduler.scheduler - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+base.py:454 #INFO     [2024-01-30 20:13:55,122] - apscheduler.scheduler - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+base.py:895 #INFO     [2024-01-30 20:13:55,122] - apscheduler.scheduler - Added job "clean_message_edit" to job store "default"
+base.py:895 #INFO     [2024-01-30 20:13:55,122] - apscheduler.scheduler - Added job "clean_chats_and_msg_chats" to job store "default"
+base.py:181 #INFO     [2024-01-30 20:13:55,122] - apscheduler.scheduler - Scheduler started
+dispatcher.py:359 #INFO     [2024-01-30 20:13:55,236] - aiogram.dispatcher.dispatcher - Start polling.
+base.py:1234 #INFO     [2024-01-30 20:14:06,900] - gino.engine._SAEngine - SELECT users.id, users.tg_id, users.username, users.is_premium, users.language_code, users.full_name, users.prime, users.referal, users.chat_id, users.count_query, users.created_at, users.updated_at 
+FROM users 
+WHERE users.tg_id = $1
+base.py:1236 #INFO     [2024-01-30 20:14:06,901] - gino.engine._SAEngine - (778981429,)
+base.py:1234 #INFO     [2024-01-30 20:14:07,158] - gino.engine._SAEngine - SELECT users.id, users.tg_id, users.username, users.is_premium, users.language_code, users.full_name, users.prime, users.referal, users.chat_id, users.count_query, users.created_at, users.updated_at 
+FROM users 
+WHERE users.tg_id = $1
+base.py:1236 #INFO     [2024-01-30 20:14:07,158] - gino.engine._SAEngine - (778981429,)
+base.py:1234 #INFO     [2024-01-30 20:14:07,163] - gino.engine._SAEngine - UPDATE users SET count_query=(users.count_query + $1), updated_at=now() WHERE users.tg_id = $2
+base.py:1236 #INFO     [2024-01-30 20:14:07,164] - gino.engine._SAEngine - (1, 778981429)
+base.py:769 #INFO     [2024-01-30 20:14:07,164] - gino.engine._SAEngine - COMMIT
+base.py:1234 #INFO     [2024-01-30 20:14:07,171] - gino.engine._SAEngine - SELECT token.id, token.token, token.email, token.created_at, token.updated_at 
+FROM token
+base.py:1236 #INFO     [2024-01-30 20:14:07,171] - gino.engine._SAEngine - ()
+base.py:1234 #INFO     [2024-01-30 20:14:07,174] - gino.engine._SAEngine - SELECT proxy.id, proxy.proxy, proxy.login, proxy.password, proxy.created_at, proxy.updated_at 
+FROM proxy
+base.py:1236 #INFO     [2024-01-30 20:14:07,174] - gino.engine._SAEngine - ()
+base.py:1234 #INFO     [2024-01-30 20:14:10,515] - gino.engine._SAEngine - INSERT INTO message_edit (tg_id, msg_id, user_promt, work, updated_at) VALUES ($1, $2, $3, $4, now()) RETURNING message_edit.id, message_edit.tg_id, message_edit.msg_id, message_edit.user_promt, message_edit.work, message_edit.created_at, message_edit.updated_at
+base.py:1236 #INFO     [2024-01-30 20:14:10,515] - gino.engine._SAEngine - (778981429, 3914, 'hello', False)
+base.py:769 #INFO     [2024-01-30 20:14:10,515] - gino.engine._SAEngine - COMMIT
+base.py:1234 #INFO     [2024-01-30 20:15:13,819] - gino.engine._SAEngine - SELECT users.id, users.tg_id, users.username, users.is_premium, users.language_code, users.full_name, users.prime, users.referal, users.chat_id, users.count_query, users.created_at, users.updated_at 
+FROM users 
+WHERE users.tg_id = $1
+base.py:1236 #INFO     [2024-01-30 20:15:13,819] - gino.engine._SAEngine - (778981429,)
+base.py:1234 #INFO     [2024-01-30 20:15:13,821] - gino.engine._SAEngine - INSERT INTO users (tg_id, username, is_premium, language_code, full_name, prime, referal, chat_id, count_query, updated_at) VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, now()) RETURNING users.id, users.tg_id, users.username, users.is_premium, users.language_code, users.full_name, users.prime, users.referal, users.chat_id, users.count_query, users.created_at, users.updated_at
+base.py:1236 #INFO     [2024-01-30 20:15:13,821] - gino.engine._SAEngine - (778981429, 'Decrich', None, 'ru', 'Decrich', False, None, 778981429, 0)
+base.py:769 #INFO     [2024-01-30 20:15:13,821] - gino.engine._SAEngine - COMMIT
+base.py:1234 #INFO     [2024-01-30 20:15:15,565] - gino.engine._SAEngine - SELECT users.id, users.tg_id, users.username, users.is_premium, users.language_code, users.full_name, users.prime, users.referal, users.chat_id, users.count_query, users.created_at, users.updated_at 
+FROM users 
+WHERE users.tg_id = $1
+base.py:1236 #INFO     [2024-01-30 20:15:15,565] - gino.engine._SAEngine - (778981429,)
+base.py:1234 #INFO     [2024-01-30 20:15:15,751] - gino.engine._SAEngine - UPDATE users SET language_code=$1, updated_at=now() WHERE users.tg_id = $2
+base.py:1236 #INFO     [2024-01-30 20:15:15,751] - gino.engine._SAEngine - ('en', 778981429)
+base.py:769 #INFO     [2024-01-30 20:15:15,751] - gino.engine._SAEngine - COMMIT
+dispatcher.py:408 #WARNING  [2024-01-30 20:15:32,024] - aiogram.dispatcher.dispatcher - Polling is stopped.
+dispatcher.py:436 #INFO     [2024-01-30 20:15:32,063] - aiogram.dispatcher.dispatcher - Stop polling...
+bot.py:84 #INFO     [2024-01-30 20:15:32,581] - __main__ - Starting bot
+base.py:454 #INFO     [2024-01-30 20:15:33,160] - apscheduler.scheduler - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+base.py:454 #INFO     [2024-01-30 20:15:33,160] - apscheduler.scheduler - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+base.py:895 #INFO     [2024-01-30 20:15:33,161] - apscheduler.scheduler - Added job "clean_message_edit" to job store "default"
+base.py:895 #INFO     [2024-01-30 20:15:33,161] - apscheduler.scheduler - Added job "clean_chats_and_msg_chats" to job store "default"
+base.py:181 #INFO     [2024-01-30 20:15:33,161] - apscheduler.scheduler - Scheduler started
+dispatcher.py:359 #INFO     [2024-01-30 20:15:33,246] - aiogram.dispatcher.dispatcher - Start polling.
+base.py:1234 #INFO     [2024-01-30 20:15:42,254] - gino.engine._SAEngine - SELECT users.id, users.tg_id, users.username, users.is_premium, users.language_code, users.full_name, users.prime, users.referal, users.chat_id, users.count_query, users.created_at, users.updated_at 
+FROM users 
+WHERE users.tg_id = $1
+base.py:1236 #INFO     [2024-01-30 20:15:42,254] - gino.engine._SAEngine - (778981429,)
+base.py:1234 #INFO     [2024-01-30 20:15:42,454] - gino.engine._SAEngine - SELECT users.id, users.tg_id, users.username, users.is_premium, users.language_code, users.full_name, users.prime, users.referal, users.chat_id, users.count_query, users.created_at, users.updated_at 
+FROM users 
+WHERE users.tg_id = $1
+base.py:1236 #INFO     [2024-01-30 20:15:42,454] - gino.engine._SAEngine - (778981429,)
+base.py:1234 #INFO     [2024-01-30 20:15:42,457] - gino.engine._SAEngine - UPDATE users SET count_query=(users.count_query + $1), updated_at=now() WHERE users.tg_id = $2
+base.py:1236 #INFO     [2024-01-30 20:15:42,457] - gino.engine._SAEngine - (1, 778981429)
+base.py:769 #INFO     [2024-01-30 20:15:42,457] - gino.engine._SAEngine - COMMIT
+base.py:1234 #INFO     [2024-01-30 20:15:42,459] - gino.engine._SAEngine - SELECT token.id, token.token, token.email, token.created_at, token.updated_at 
+FROM token
+base.py:1236 #INFO     [2024-01-30 20:15:42,459] - gino.engine._SAEngine - ()
+base.py:1234 #INFO     [2024-01-30 20:15:42,461] - gino.engine._SAEngine - SELECT proxy.id, proxy.proxy, proxy.login, proxy.password, proxy.created_at, proxy.updated_at 
+FROM proxy
+base.py:1236 #INFO     [2024-01-30 20:15:42,461] - gino.engine._SAEngine - ()
+base.py:1234 #INFO     [2024-01-30 20:15:44,174] - gino.engine._SAEngine - INSERT INTO message_edit (tg_id, msg_id, user_promt, work, updated_at) VALUES ($1, $2, $3, $4, now()) RETURNING message_edit.id, message_edit.tg_id, message_edit.msg_id, message_edit.user_promt, message_edit.work, message_edit.created_at, message_edit.updated_at
+base.py:1236 #INFO     [2024-01-30 20:15:44,174] - gino.engine._SAEngine - (778981429, 3922, 'hello', False)
+base.py:769 #INFO     [2024-01-30 20:15:44,174] - gino.engine._SAEngine - COMMIT
+error.py:87 #ERROR    [2024-01-30 20:15:44,356] - root - BadRequest: Message can't be edited 
+Update: {"update_id": 734372102, "message": {"message_id": 3922, "from": {"id": 778981429, "is_bot": false, "first_name": "Decrich", "username": "Decrich", "language_code": "ru"}, "chat": {"id": 778981429, "first_name": "Decrich", "username": "Decrich", "type": "private"}, "date": 1706634942, "text": "hello"}}
+Traceback (most recent call last):
+  File "/home/lorehunt/PycharmProjects/Gemini/venv/lib/python3.11/site-packages/aiogram/dispatcher/dispatcher.py", line 257, in process_update
+    return await self.message_handlers.notify(update.message)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/lorehunt/PycharmProjects/Gemini/venv/lib/python3.11/site-packages/aiogram/dispatcher/handler.py", line 117, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/lorehunt/PycharmProjects/Gemini/tgbot/handlers/base_mode.py", line 55, in answer_model_base
+    await stiker.edit_text(text,
+  File "/home/lorehunt/PycharmProjects/Gemini/venv/lib/python3.11/site-packages/aiogram/types/message.py", line 2919, in edit_text
+    return await self.bot.edit_message_text(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/lorehunt/PycharmProjects/Gemini/venv/lib/python3.11/site-packages/aiogram/bot/bot.py", line 3122, in edit_message_text
+    result = await self.request(api.Methods.EDIT_MESSAGE_TEXT, payload)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/lorehunt/PycharmProjects/Gemini/venv/lib/python3.11/site-packages/aiogram/bot/base.py", line 236, in request
+    return await api.make_request(await self.get_session(), self.server, self.__token, method, data, files,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/lorehunt/PycharmProjects/Gemini/venv/lib/python3.11/site-packages/aiogram/bot/api.py", line 140, in make_request
+    return check_result(method, response.content_type, response.status, await response.text())
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/lorehunt/PycharmProjects/Gemini/venv/lib/python3.11/site-packages/aiogram/bot/api.py", line 115, in check_result
+    exceptions.BadRequest.detect(description)
+  File "/home/lorehunt/PycharmProjects/Gemini/venv/lib/python3.11/site-packages/aiogram/utils/exceptions.py", line 140, in detect
+    raise err(cls.text or description)
+aiogram.utils.exceptions.MessageCantBeEdited: Message can't be edited
+dispatcher.py:408 #WARNING  [2024-01-30 20:16:05,482] - aiogram.dispatcher.dispatcher - Polling is stopped.
+dispatcher.py:436 #INFO     [2024-01-30 20:16:05,523] - aiogram.dispatcher.dispatcher - Stop polling...
+bot.py:84 #INFO     [2024-01-30 20:16:06,079] - __main__ - Starting bot
+base.py:454 #INFO     [2024-01-30 20:16:06,715] - apscheduler.scheduler - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+base.py:454 #INFO     [2024-01-30 20:16:06,716] - apscheduler.scheduler - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+base.py:895 #INFO     [2024-01-30 20:16:06,716] - apscheduler.scheduler - Added job "clean_message_edit" to job store "default"
+base.py:895 #INFO     [2024-01-30 20:16:06,716] - apscheduler.scheduler - Added job "clean_chats_and_msg_chats" to job store "default"
+base.py:181 #INFO     [2024-01-30 20:16:06,716] - apscheduler.scheduler - Scheduler started
+dispatcher.py:359 #INFO     [2024-01-30 20:16:06,869] - aiogram.dispatcher.dispatcher - Start polling.
+base.py:1234 #INFO     [2024-01-30 20:16:11,302] - gino.engine._SAEngine - SELECT users.id, users.tg_id, users.username, users.is_premium, users.language_code, users.full_name, users.prime, users.referal, users.chat_id, users.count_query, users.created_at, users.updated_at 
+FROM users 
+WHERE users.tg_id = $1
+base.py:1236 #INFO     [2024-01-30 20:16:11,302] - gino.engine._SAEngine - (778981429,)
+base.py:1234 #INFO     [2024-01-30 20:16:11,750] - gino.engine._SAEngine - SELECT users.id, users.tg_id, users.username, users.is_premium, users.language_code, users.full_name, users.prime, users.referal, users.chat_id, users.count_query, users.created_at, users.updated_at 
+FROM users 
+WHERE users.tg_id = $1
+base.py:1236 #INFO     [2024-01-30 20:16:11,750] - gino.engine._SAEngine - (778981429,)
+base.py:1234 #INFO     [2024-01-30 20:16:11,752] - gino.engine._SAEngine - UPDATE users SET count_query=(users.count_query + $1), updated_at=now() WHERE users.tg_id = $2
+base.py:1236 #INFO     [2024-01-30 20:16:11,752] - gino.engine._SAEngine - (1, 778981429)
+base.py:769 #INFO     [2024-01-30 20:16:11,752] - gino.engine._SAEngine - COMMIT
+base.py:1234 #INFO     [2024-01-30 20:16:11,755] - gino.engine._SAEngine - SELECT token.id, token.token, token.email, token.created_at, token.updated_at 
+FROM token
+base.py:1236 #INFO     [2024-01-30 20:16:11,755] - gino.engine._SAEngine - ()
+base.py:1234 #INFO     [2024-01-30 20:16:11,756] - gino.engine._SAEngine - SELECT proxy.id, proxy.proxy, proxy.login, proxy.password, proxy.created_at, proxy.updated_at 
+FROM proxy
+base.py:1236 #INFO     [2024-01-30 20:16:11,756] - gino.engine._SAEngine - ()
+base.py:1234 #INFO     [2024-01-30 20:16:13,629] - gino.engine._SAEngine - INSERT INTO message_edit (tg_id, msg_id, user_promt, work, updated_at) VALUES ($1, $2, $3, $4, now()) RETURNING message_edit.id, message_edit.tg_id, message_edit.msg_id, message_edit.user_promt, message_edit.work, message_edit.created_at, message_edit.updated_at
+base.py:1236 #INFO     [2024-01-30 20:16:13,629] - gino.engine._SAEngine - (778981429, 3925, 'hi', False)
+base.py:769 #INFO     [2024-01-30 20:16:13,629] - gino.engine._SAEngine - COMMIT
+base.py:1234 #INFO     [2024-01-30 20:16:19,259] - gino.engine._SAEngine - SELECT users.id, users.tg_id, users.username, users.is_premium, users.language_code, users.full_name, users.prime, users.referal, users.chat_id, users.count_query, users.created_at, users.updated_at 
+FROM users 
+WHERE users.tg_id = $1
+base.py:1236 #INFO     [2024-01-30 20:16:19,259] - gino.engine._SAEngine - (778981429,)
+base.py:1234 #INFO     [2024-01-30 20:16:19,478] - gino.engine._SAEngine - SELECT message_edit.id, message_edit.tg_id, message_edit.msg_id, message_edit.user_promt, message_edit.work, message_edit.created_at, message_edit.updated_at 
+FROM message_edit 
+WHERE message_edit.tg_id = $1 OR message_edit.msg_id = $2
+base.py:1236 #INFO     [2024-01-30 20:16:19,478] - gino.engine._SAEngine - (6686903753, 3925)
+base.py:1234 #INFO     [2024-01-30 20:16:19,481] - gino.engine._SAEngine - SELECT token.id, token.token, token.email, token.created_at, token.updated_at 
+FROM token
+base.py:1236 #INFO     [2024-01-30 20:16:19,482] - gino.engine._SAEngine - ()
+base.py:1234 #INFO     [2024-01-30 20:16:19,483] - gino.engine._SAEngine - SELECT proxy.id, proxy.proxy, proxy.login, proxy.password, proxy.created_at, proxy.updated_at 
+FROM proxy
+base.py:1236 #INFO     [2024-01-30 20:16:19,483] - gino.engine._SAEngine - ()
+base.py:1234 #INFO     [2024-01-30 20:16:21,550] - gino.engine._SAEngine - DELETE FROM message_edit WHERE message_edit.tg_id = $1 OR message_edit.msg_id = $2
+base.py:1236 #INFO     [2024-01-30 20:16:21,550] - gino.engine._SAEngine - (6686903753, 3925)
+base.py:769 #INFO     [2024-01-30 20:16:21,550] - gino.engine._SAEngine - COMMIT
+dispatcher.py:408 #WARNING  [2024-01-30 20:18:44,418] - aiogram.dispatcher.dispatcher - Polling is stopped.
+dispatcher.py:436 #INFO     [2024-01-30 20:18:44,459] - aiogram.dispatcher.dispatcher - Stop polling...
+bot.py:84 #INFO     [2024-01-30 20:18:45,008] - __main__ - Starting bot
+base.py:454 #INFO     [2024-01-30 20:18:50,619] - apscheduler.scheduler - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+base.py:454 #INFO     [2024-01-30 20:18:50,620] - apscheduler.scheduler - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+base.py:895 #INFO     [2024-01-30 20:18:50,620] - apscheduler.scheduler - Added job "clean_message_edit" to job store "default"
+base.py:895 #INFO     [2024-01-30 20:18:50,620] - apscheduler.scheduler - Added job "clean_chats_and_msg_chats" to job store "default"
+base.py:181 #INFO     [2024-01-30 20:18:50,620] - apscheduler.scheduler - Scheduler started
+dispatcher.py:359 #INFO     [2024-01-30 20:18:50,702] - aiogram.dispatcher.dispatcher - Start polling.
+base.py:1234 #INFO     [2024-01-30 20:18:55,214] - gino.engine._SAEngine - SELECT users.id, users.tg_id, users.username, users.is_premium, users.language_code, users.full_name, users.prime, users.referal, users.chat_id, users.count_query, users.created_at, users.updated_at 
+FROM users 
+WHERE users.tg_id = $1
+base.py:1236 #INFO     [2024-01-30 20:18:55,214] - gino.engine._SAEngine - (778981429,)
+base.py:1234 #INFO     [2024-01-30 20:18:55,218] - gino.engine._SAEngine - INSERT INTO users (tg_id, username, is_premium, language_code, full_name, prime, referal, chat_id, count_query, updated_at) VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, now()) RETURNING users.id, users.tg_id, users.username, users.is_premium, users.language_code, users.full_name, users.prime, users.referal, users.chat_id, users.count_query, users.created_at, users.updated_at
+base.py:1236 #INFO     [2024-01-30 20:18:55,218] - gino.engine._SAEngine - (778981429, 'Decrich', None, 'ru', 'Decrich', False, None, 778981429, 0)
+base.py:769 #INFO     [2024-01-30 20:18:55,218] - gino.engine._SAEngine - COMMIT
+base.py:1234 #INFO     [2024-01-30 20:18:56,972] - gino.engine._SAEngine - SELECT users.id, users.tg_id, users.username, users.is_premium, users.language_code, users.full_name, users.prime, users.referal, users.chat_id, users.count_query, users.created_at, users.updated_at 
+FROM users 
+WHERE users.tg_id = $1
+base.py:1236 #INFO     [2024-01-30 20:18:56,972] - gino.engine._SAEngine - (778981429,)
+base.py:1234 #INFO     [2024-01-30 20:18:57,108] - gino.engine._SAEngine - UPDATE users SET language_code=$1, updated_at=now() WHERE users.tg_id = $2
+base.py:1236 #INFO     [2024-01-30 20:18:57,109] - gino.engine._SAEngine - ('ru', 778981429)
+base.py:769 #INFO     [2024-01-30 20:18:57,109] - gino.engine._SAEngine - COMMIT
+base.py:1234 #INFO     [2024-01-30 20:19:11,406] - gino.engine._SAEngine - SELECT users.id, users.tg_id, users.username, users.is_premium, users.language_code, users.full_name, users.prime, users.referal, users.chat_id, users.count_query, users.created_at, users.updated_at 
+FROM users 
+WHERE users.tg_id = $1
+base.py:1236 #INFO     [2024-01-30 20:19:11,406] - gino.engine._SAEngine - (778981429,)
+base.py:1234 #INFO     [2024-01-30 20:19:11,611] - gino.engine._SAEngine - SELECT users.id, users.tg_id, users.username, users.is_premium, users.language_code, users.full_name, users.prime, users.referal, users.chat_id, users.count_query, users.created_at, users.updated_at 
+FROM users 
+WHERE users.tg_id = $1
+base.py:1236 #INFO     [2024-01-30 20:19:11,611] - gino.engine._SAEngine - (778981429,)
+base.py:1234 #INFO     [2024-01-30 20:19:11,613] - gino.engine._SAEngine - UPDATE users SET count_query=(users.count_query + $1), updated_at=now() WHERE users.tg_id = $2
+base.py:1236 #INFO     [2024-01-30 20:19:11,613] - gino.engine._SAEngine - (1, 778981429)
+base.py:769 #INFO     [2024-01-30 20:19:11,613] - gino.engine._SAEngine - COMMIT
+base.py:1234 #INFO     [2024-01-30 20:19:11,616] - gino.engine._SAEngine - SELECT token.id, token.token, token.email, token.created_at, token.updated_at 
+FROM token
+base.py:1236 #INFO     [2024-01-30 20:19:11,616] - gino.engine._SAEngine - ()
+base.py:1234 #INFO     [2024-01-30 20:19:11,618] - gino.engine._SAEngine - SELECT proxy.id, proxy.proxy, proxy.login, proxy.password, proxy.created_at, proxy.updated_at 
+FROM proxy
+base.py:1236 #INFO     [2024-01-30 20:19:11,618] - gino.engine._SAEngine - ()
+base.py:1234 #INFO     [2024-01-30 20:19:21,663] - gino.engine._SAEngine - INSERT INTO message_edit (tg_id, msg_id, user_promt, work, updated_at) VALUES ($1, $2, $3, $4, now()) RETURNING message_edit.id, message_edit.tg_id, message_edit.msg_id, message_edit.user_promt, message_edit.work, message_edit.created_at, message_edit.updated_at
+base.py:1236 #INFO     [2024-01-30 20:19:21,663] - gino.engine._SAEngine - (778981429, 3933, 'как создать бизнес', False)
+base.py:769 #INFO     [2024-01-30 20:19:21,663] - gino.engine._SAEngine - COMMIT
+base.py:1234 #INFO     [2024-01-30 20:19:34,477] - gino.engine._SAEngine - SELECT users.id, users.tg_id, users.username, users.is_premium, users.language_code, users.full_name, users.prime, users.referal, users.chat_id, users.count_query, users.created_at, users.updated_at 
+FROM users 
+WHERE users.tg_id = $1
+base.py:1236 #INFO     [2024-01-30 20:19:34,477] - gino.engine._SAEngine - (778981429,)
+base.py:1234 #INFO     [2024-01-30 20:19:34,661] - gino.engine._SAEngine - SELECT message_edit.id, message_edit.tg_id, message_edit.msg_id, message_edit.user_promt, message_edit.work, message_edit.created_at, message_edit.updated_at 
+FROM message_edit 
+WHERE message_edit.tg_id = $1 OR message_edit.msg_id = $2
+base.py:1236 #INFO     [2024-01-30 20:19:34,661] - gino.engine._SAEngine - (6686903753, 3933)
+base.py:1234 #INFO     [2024-01-30 20:19:34,663] - gino.engine._SAEngine - SELECT token.id, token.token, token.email, token.created_at, token.updated_at 
+FROM token
+base.py:1236 #INFO     [2024-01-30 20:19:34,663] - gino.engine._SAEngine - ()
+base.py:1234 #INFO     [2024-01-30 20:19:34,664] - gino.engine._SAEngine - SELECT proxy.id, proxy.proxy, proxy.login, proxy.password, proxy.created_at, proxy.updated_at 
+FROM proxy
+base.py:1236 #INFO     [2024-01-30 20:19:34,664] - gino.engine._SAEngine - ()
+base.py:1234 #INFO     [2024-01-30 20:19:41,430] - gino.engine._SAEngine - DELETE FROM message_edit WHERE message_edit.tg_id = $1 OR message_edit.msg_id = $2
+base.py:1236 #INFO     [2024-01-30 20:19:41,430] - gino.engine._SAEngine - (6686903753, 3933)
+base.py:769 #INFO     [2024-01-30 20:19:41,430] - gino.engine._SAEngine - COMMIT
+base.py:1234 #INFO     [2024-01-30 20:19:48,488] - gino.engine._SAEngine - SELECT users.id, users.tg_id, users.username, users.is_premium, users.language_code, users.full_name, users.prime, users.referal, users.chat_id, users.count_query, users.created_at, users.updated_at 
+FROM users 
+WHERE users.tg_id = $1
+base.py:1236 #INFO     [2024-01-30 20:19:48,489] - gino.engine._SAEngine - (778981429,)
+base.py:1234 #INFO     [2024-01-30 20:19:48,611] - gino.engine._SAEngine - SELECT users.id, users.tg_id, users.username, users.is_premium, users.language_code, users.full_name, users.prime, users.referal, users.chat_id, users.count_query, users.created_at, users.updated_at 
+FROM users 
+WHERE users.tg_id = $1
+base.py:1236 #INFO     [2024-01-30 20:19:48,611] - gino.engine._SAEngine - (778981429,)
+base.py:1234 #INFO     [2024-01-30 20:19:48,612] - gino.engine._SAEngine - UPDATE users SET count_query=(users.count_query + $1), updated_at=now() WHERE users.tg_id = $2
+base.py:1236 #INFO     [2024-01-30 20:19:48,612] - gino.engine._SAEngine - (1, 778981429)
+base.py:769 #INFO     [2024-01-30 20:19:48,612] - gino.engine._SAEngine - COMMIT
+base.py:1234 #INFO     [2024-01-30 20:19:48,752] - gino.engine._SAEngine - INSERT INTO chats (user_tg_id, updated_at) VALUES ($1, now()) RETURNING chats.id, chats.user_tg_id, chats.created_at, chats.updated_at
+base.py:1236 #INFO     [2024-01-30 20:19:48,752] - gino.engine._SAEngine - (778981429,)
+base.py:769 #INFO     [2024-01-30 20:19:48,752] - gino.engine._SAEngine - COMMIT
+base.py:1234 #INFO     [2024-01-30 20:19:53,414] - gino.engine._SAEngine - SELECT users.id, users.tg_id, users.username, users.is_premium, users.language_code, users.full_name, users.prime, users.referal, users.chat_id, users.count_query, users.created_at, users.updated_at 
+FROM users 
+WHERE users.tg_id = $1
+base.py:1236 #INFO     [2024-01-30 20:19:53,414] - gino.engine._SAEngine - (778981429,)
+base.py:1234 #INFO     [2024-01-30 20:19:53,767] - gino.engine._SAEngine - INSERT INTO chat_messages (chat_id, role, text, updated_at) VALUES ($1, $2, $3, now()) RETURNING chat_messages.id, chat_messages.chat_id, chat_messages.role, chat_messages.text, chat_messages.created_at, chat_messages.updated_at
+base.py:1236 #INFO     [2024-01-30 20:19:53,767] - gino.engine._SAEngine - (59, 'user', 'привет')
+base.py:769 #INFO     [2024-01-30 20:19:53,767] - gino.engine._SAEngine - COMMIT
+base.py:1234 #INFO     [2024-01-30 20:19:53,771] - gino.engine._SAEngine - SELECT chat_messages.id, chat_messages.chat_id, chat_messages.role, chat_messages.text, chat_messages.created_at, chat_messages.updated_at 
+FROM chat_messages 
+WHERE chat_messages.chat_id = $1
+base.py:1236 #INFO     [2024-01-30 20:19:53,771] - gino.engine._SAEngine - (59,)
+base.py:1234 #INFO     [2024-01-30 20:19:53,774] - gino.engine._SAEngine - SELECT token.id, token.token, token.email, token.created_at, token.updated_at 
+FROM token
+base.py:1236 #INFO     [2024-01-30 20:19:53,774] - gino.engine._SAEngine - ()
+base.py:1234 #INFO     [2024-01-30 20:19:53,775] - gino.engine._SAEngine - SELECT proxy.id, proxy.proxy, proxy.login, proxy.password, proxy.created_at, proxy.updated_at 
+FROM proxy
+base.py:1236 #INFO     [2024-01-30 20:19:53,775] - gino.engine._SAEngine - ()
+base.py:1234 #INFO     [2024-01-30 20:19:55,179] - gino.engine._SAEngine - INSERT INTO chat_messages (chat_id, role, text, updated_at) VALUES ($1, $2, $3, now()) RETURNING chat_messages.id, chat_messages.chat_id, chat_messages.role, chat_messages.text, chat_messages.created_at, chat_messages.updated_at
+base.py:1236 #INFO     [2024-01-30 20:19:55,180] - gino.engine._SAEngine - (59, 'model', 'Привет! Как дела?\n\n')
+base.py:769 #INFO     [2024-01-30 20:19:55,180] - gino.engine._SAEngine - COMMIT
+base.py:1234 #INFO     [2024-01-30 20:19:57,857] - gino.engine._SAEngine - SELECT users.id, users.tg_id, users.username, users.is_premium, users.language_code, users.full_name, users.prime, users.referal, users.chat_id, users.count_query, users.created_at, users.updated_at 
+FROM users 
+WHERE users.tg_id = $1
+base.py:1236 #INFO     [2024-01-30 20:19:57,857] - gino.engine._SAEngine - (778981429,)
+base.py:1234 #INFO     [2024-01-30 20:19:58,055] - gino.engine._SAEngine - DELETE FROM chats WHERE chats.id = $1
+base.py:1236 #INFO     [2024-01-30 20:19:58,055] - gino.engine._SAEngine - (59,)
+base.py:769 #INFO     [2024-01-30 20:19:58,055] - gino.engine._SAEngine - COMMIT
+base.py:1234 #INFO     [2024-01-30 20:19:58,059] - gino.engine._SAEngine - DELETE FROM chat_messages WHERE chat_messages.chat_id = $1
+base.py:1236 #INFO     [2024-01-30 20:19:58,059] - gino.engine._SAEngine - (59,)
+base.py:769 #INFO     [2024-01-30 20:19:58,059] - gino.engine._SAEngine - COMMIT
+base.py:1234 #INFO     [2024-01-30 20:20:00,424] - gino.engine._SAEngine - SELECT users.id, users.tg_id, users.username, users.is_premium, users.language_code, users.full_name, users.prime, users.referal, users.chat_id, users.count_query, users.created_at, users.updated_at 
+FROM users 
+WHERE users.tg_id = $1
+base.py:1236 #INFO     [2024-01-30 20:20:00,424] - gino.engine._SAEngine - (778981429,)
+base.py:1234 #INFO     [2024-01-30 20:20:00,507] - gino.engine._SAEngine - SELECT users.id, users.tg_id, users.username, users.is_premium, users.language_code, users.full_name, users.prime, users.referal, users.chat_id, users.count_query, users.created_at, users.updated_at 
+FROM users 
+WHERE users.tg_id = $1
+base.py:1236 #INFO     [2024-01-30 20:20:00,508] - gino.engine._SAEngine - (778981429,)
+base.py:1234 #INFO     [2024-01-30 20:20:00,509] - gino.engine._SAEngine - UPDATE users SET count_query=(users.count_query + $1), updated_at=now() WHERE users.tg_id = $2
+base.py:1236 #INFO     [2024-01-30 20:20:00,510] - gino.engine._SAEngine - (1, 778981429)
+base.py:769 #INFO     [2024-01-30 20:20:00,510] - gino.engine._SAEngine - COMMIT
+base.py:1234 #INFO     [2024-01-30 20:20:00,512] - gino.engine._SAEngine - SELECT prompt.id, prompt.label, prompt.name_mode, prompt.prompt, prompt.created_at, prompt.updated_at 
+FROM prompt
+base.py:1236 #INFO     [2024-01-30 20:20:00,513] - gino.engine._SAEngine - ()
+base.py:1234 #INFO     [2024-01-30 20:20:00,638] - gino.engine._SAEngine - INSERT INTO chats (user_tg_id, updated_at) VALUES ($1, now()) RETURNING chats.id, chats.user_tg_id, chats.created_at, chats.updated_at
+base.py:1236 #INFO     [2024-01-30 20:20:00,638] - gino.engine._SAEngine - (778981429,)
+base.py:769 #INFO     [2024-01-30 20:20:00,638] - gino.engine._SAEngine - COMMIT
+base.py:1234 #INFO     [2024-01-30 20:20:08,647] - gino.engine._SAEngine - SELECT users.id, users.tg_id, users.username, users.is_premium, users.language_code, users.full_name, users.prime, users.referal, users.chat_id, users.count_query, users.created_at, users.updated_at 
+FROM users 
+WHERE users.tg_id = $1
+base.py:1236 #INFO     [2024-01-30 20:20:08,647] - gino.engine._SAEngine - (778981429,)
+base.py:1234 #INFO     [2024-01-30 20:20:08,881] - gino.engine._SAEngine - SELECT prompt.id, prompt.label, prompt.name_mode, prompt.prompt, prompt.created_at, prompt.updated_at 
+FROM prompt
+base.py:1236 #INFO     [2024-01-30 20:20:08,881] - gino.engine._SAEngine - ()
+base.py:1234 #INFO     [2024-01-30 20:20:08,882] - gino.engine._SAEngine - INSERT INTO chat_messages (chat_id, role, text, updated_at) VALUES ($1, $2, $3, now()) RETURNING chat_messages.id, chat_messages.chat_id, chat_messages.role, chat_messages.text, chat_messages.created_at, chat_messages.updated_at
+base.py:1236 #INFO     [2024-01-30 20:20:08,883] - gino.engine._SAEngine - (60, 'user', 'Я хочу, чтобы вы выступили в роли толкователя снов. Я опишу вам свои сны, а вы дадите толкования, основанные на символах и темах, присутствующих во с ... (6 characters truncated) ...  высказывайте личного мнения или предположений о сновидце. Предоставляйте только фактические интерпретации, основанные на предоставленной информации.')
+base.py:769 #INFO     [2024-01-30 20:20:08,883] - gino.engine._SAEngine - COMMIT
+base.py:1234 #INFO     [2024-01-30 20:20:08,885] - gino.engine._SAEngine - SELECT token.id, token.token, token.email, token.created_at, token.updated_at 
+FROM token
+base.py:1236 #INFO     [2024-01-30 20:20:08,885] - gino.engine._SAEngine - ()
+base.py:1234 #INFO     [2024-01-30 20:20:08,886] - gino.engine._SAEngine - SELECT proxy.id, proxy.proxy, proxy.login, proxy.password, proxy.created_at, proxy.updated_at 
+FROM proxy
+base.py:1236 #INFO     [2024-01-30 20:20:08,886] - gino.engine._SAEngine - ()
+base.py:1234 #INFO     [2024-01-30 20:20:17,725] - gino.engine._SAEngine - INSERT INTO chat_messages (chat_id, role, text, updated_at) VALUES ($1, $2, $3, now()) RETURNING chat_messages.id, chat_messages.chat_id, chat_messages.role, chat_messages.text, chat_messages.created_at, chat_messages.updated_at
+base.py:1236 #INFO     [2024-01-30 20:20:17,725] - gino.engine._SAEngine - (60, 'model', 'Сон 1:\n\n• Вы находитесь в темном лесу, окруженном высокими деревьями.\n• Вы чувствуете себя потерянным и испуганным.\n• Внезапно вы видите вдалеке  ... (1325 characters truncated) ... ершина горы может символизировать достижение цели.\n• Сон может означать, что вы чувствуете себя сильным и уверенным, и что вы достигли своей цели.\n')
+base.py:769 #INFO     [2024-01-30 20:20:17,726] - gino.engine._SAEngine - COMMIT
+base.py:1234 #INFO     [2024-01-30 20:20:24,588] - gino.engine._SAEngine - SELECT users.id, users.tg_id, users.username, users.is_premium, users.language_code, users.full_name, users.prime, users.referal, users.chat_id, users.count_query, users.created_at, users.updated_at 
+FROM users 
+WHERE users.tg_id = $1
+base.py:1236 #INFO     [2024-01-30 20:20:24,588] - gino.engine._SAEngine - (778981429,)
+base.py:1234 #INFO     [2024-01-30 20:20:24,884] - gino.engine._SAEngine - INSERT INTO chat_messages (chat_id, role, text, updated_at) VALUES ($1, $2, $3, now()) RETURNING chat_messages.id, chat_messages.chat_id, chat_messages.role, chat_messages.text, chat_messages.created_at, chat_messages.updated_at
+base.py:1236 #INFO     [2024-01-30 20:20:24,884] - gino.engine._SAEngine - (60, 'user', 'мышь')
+base.py:769 #INFO     [2024-01-30 20:20:24,884] - gino.engine._SAEngine - COMMIT
+base.py:1234 #INFO     [2024-01-30 20:20:24,886] - gino.engine._SAEngine - SELECT chat_messages.id, chat_messages.chat_id, chat_messages.role, chat_messages.text, chat_messages.created_at, chat_messages.updated_at 
+FROM chat_messages 
+WHERE chat_messages.chat_id = $1
+base.py:1236 #INFO     [2024-01-30 20:20:24,886] - gino.engine._SAEngine - (60,)
+base.py:1234 #INFO     [2024-01-30 20:20:24,887] - gino.engine._SAEngine - SELECT token.id, token.token, token.email, token.created_at, token.updated_at 
+FROM token
+base.py:1236 #INFO     [2024-01-30 20:20:24,887] - gino.engine._SAEngine - ()
+base.py:1234 #INFO     [2024-01-30 20:20:24,888] - gino.engine._SAEngine - SELECT proxy.id, proxy.proxy, proxy.login, proxy.password, proxy.created_at, proxy.updated_at 
+FROM proxy
+base.py:1236 #INFO     [2024-01-30 20:20:24,888] - gino.engine._SAEngine - ()
+base.py:1234 #INFO     [2024-01-30 20:20:33,964] - gino.engine._SAEngine - INSERT INTO chat_messages (chat_id, role, text, updated_at) VALUES ($1, $2, $3, now()) RETURNING chat_messages.id, chat_messages.chat_id, chat_messages.role, chat_messages.text, chat_messages.created_at, chat_messages.updated_at
+base.py:1236 #INFO     [2024-01-30 20:20:33,965] - gino.engine._SAEngine - (60, 'model', 'Мышь во сне\n\nСимволика:\n\n• Маленький размер и проворность мыши могут символизировать ловкость, хитрость и умение приспосабливаться к обстоятельст ... (1491 characters truncated) ... \nОтрицательные значения:\n\n• Слишком большое любопытство\n• Склонность к риску\n• Страх перед неизвестностью\n• Отвращение к чему-либо\n• Болезнь\n')
+base.py:769 #INFO     [2024-01-30 20:20:33,965] - gino.engine._SAEngine - COMMIT
+base.py:1234 #INFO     [2024-01-30 20:20:48,386] - gino.engine._SAEngine - SELECT users.id, users.tg_id, users.username, users.is_premium, users.language_code, users.full_name, users.prime, users.referal, users.chat_id, users.count_query, users.created_at, users.updated_at 
+FROM users 
+WHERE users.tg_id = $1
+base.py:1236 #INFO     [2024-01-30 20:20:48,386] - gino.engine._SAEngine - (778981429,)
+base.py:1234 #INFO     [2024-01-30 20:20:48,553] - gino.engine._SAEngine - DELETE FROM chats WHERE chats.id = $1
+base.py:1236 #INFO     [2024-01-30 20:20:48,553] - gino.engine._SAEngine - (60,)
+base.py:769 #INFO     [2024-01-30 20:20:48,553] - gino.engine._SAEngine - COMMIT
+base.py:1234 #INFO     [2024-01-30 20:20:48,555] - gino.engine._SAEngine - DELETE FROM chat_messages WHERE chat_messages.chat_id = $1
+base.py:1236 #INFO     [2024-01-30 20:20:48,555] - gino.engine._SAEngine - (60,)
+base.py:769 #INFO     [2024-01-30 20:20:48,555] - gino.engine._SAEngine - COMMIT
+dispatcher.py:408 #WARNING  [2024-01-30 20:20:57,430] - aiogram.dispatcher.dispatcher - Polling is stopped.
+dispatcher.py:436 #INFO     [2024-01-30 20:20:57,485] - aiogram.dispatcher.dispatcher - Stop polling...

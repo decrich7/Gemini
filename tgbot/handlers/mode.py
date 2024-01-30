@@ -118,6 +118,7 @@ async def start_prompt_model(call: CallbackQuery, state: FSMContext):
 @rate_limit(3, key='msg')
 async def answer_model_mode(message: types.Message, state: FSMContext):
     await message.answer_chat_action(ChatActions.TYPING)
+    stiker = await message.answer_sticker('CAACAgIAAxkBAAEDLTlluSyxd49nDKFLl8umFD_0086lXQACkhYAAnU0OErf-3hMDWEWtDQE')
 
     # user = await User.select_user(message.from_user.id)
     id_chat = await state.get_data()
@@ -137,7 +138,7 @@ async def answer_model_mode(message: types.Message, state: FSMContext):
     text_model = await main_chat_input(list_answers, params=params)
 
     await ChatMessages.add_msg(chat_id=id_chat.get('id_chat'), role='model', text=text_model)
-
+    await stiker.delete()
     await message.answer(text_model,
                             reply_markup=finish_chat)
 

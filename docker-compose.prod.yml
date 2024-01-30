@@ -1,0 +1,24 @@
+version: "3"
+services:
+  bot:
+      build:
+        context: .
+        dockerfile: Dockerfile
+      command: >
+        sh -c "python bot.py"
+      networks:
+        - web
+      environment:
+        DB_HOST: "postgresql"
+        DB_PORT: "5432"
+        DB_NAME: "gemini_bot"
+        DB_USER: "postgres"
+        PG_PASSWORD: "24651asd"
+        TZ: "Europe/Moscow"
+      volumes:
+        - media:/app/media/
+volumes:
+  media:
+networks:
+  web:
+    external: true

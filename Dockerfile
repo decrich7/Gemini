@@ -1,8 +1,24 @@
-FROM python:3.9-buster
-ENV BOT_NAME=$BOT_NAME
+FROM python:3.12-alpine as builder
 
-WORKDIR /usr/src/app/"${BOT_NAME:-tg_bot}"
+WORKDIR /app
 
-COPY requirements.txt /usr/src/app/"${BOT_NAME:-tg_bot}"
-RUN pip install -r /usr/src/app/"${BOT_NAME:-tg_bot}"/requirements.txt
-COPY . /usr/src/app/"${BOT_NAME:-tg_bot}"
+ENV PYTHONDONTWRITEBYTECODE 1
+ENV PYTHONUNBUFFERED 1
+
+RUN apk add --no-cache --virtual .build-deps gcc python3-dev musl-dev postgresql-dev tzdata
+RUN pip install --upgrade pip
+
+COPY requirements.txt .
+RUN pip wheel --no-cache-dir --no-deps --wheel-dir /app/wheels -r requirements.txt
+
+FROM python:3.12-alpine
+
+WORKDIR /app
+
+COPY --from=builder /app/wheels /wheels
+COPY --from=builder /app/requirements.txt .
+
+RUN pip install --no-cache /wheels/*
+RUN apk update && apk add --no-cache tzdata
+
+COPY . .

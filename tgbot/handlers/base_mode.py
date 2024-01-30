@@ -19,7 +19,7 @@ from tgbot.services.db_api.schemas.user import User
 @rate_limit(3, key='msg')
 async def answer_model_base(message: types.Message):
     await message.answer_chat_action(ChatActions.TYPING)
-
+    stiker = await message.answer_sticker('CAACAgIAAxkBAAEDLTlluSyxd49nDKFLl8umFD_0086lXQACkhYAAnU0OErf-3hMDWEWtDQE')
     user: User = await User.select_user(message.from_user.id)
     time_difference: datetime = datetime.datetime.now() - user.updated_at
 
@@ -52,7 +52,7 @@ async def answer_model_base(message: types.Message):
                               msg_id=message.message_id)
 
     # text = '234'
-
+    await stiker.delete()
     await message.answer(text,
                          reply_markup=get_refactor_inline_keyboards(db_msg_id=message.message_id))
 
