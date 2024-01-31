@@ -1735,3 +1735,27 @@ base.py:1236 #INFO     [2024-01-30 20:20:48,555] - gino.engine._SAEngine - (60,)
 base.py:769 #INFO     [2024-01-30 20:20:48,555] - gino.engine._SAEngine - COMMIT
 dispatcher.py:408 #WARNING  [2024-01-30 20:20:57,430] - aiogram.dispatcher.dispatcher - Polling is stopped.
 dispatcher.py:436 #INFO     [2024-01-30 20:20:57,485] - aiogram.dispatcher.dispatcher - Stop polling...
+bot.py:84 #INFO     [2024-01-30 20:24:12,785] - __main__ - Starting bot
+bot.py:84 #INFO     [2024-01-30 20:24:14,958] - __main__ - Starting bot
+bot.py:84 #INFO     [2024-01-30 20:24:16,247] - __main__ - Starting bot
+bot.py:84 #INFO     [2024-01-30 20:24:17,782] - __main__ - Starting bot
+bot.py:84 #INFO     [2024-01-30 20:24:19,692] - __main__ - Starting bot
+bot.py:84 #INFO     [2024-01-30 20:24:22,356] - __main__ - Starting bot
+bot.py:84 #INFO     [2024-01-30 20:24:26,677] - __main__ - Starting bot
+bot.py:84 #INFO     [2024-01-30 20:24:34,125] - __main__ - Starting bot
+bot.py:84 #INFO     [2024-01-30 20:24:48,000] - __main__ - Starting bot
+bot.py:84 #INFO     [2024-01-30 20:25:14,683] - __main__ - Starting bot
+bot.py:84 #INFO     [2024-01-30 20:26:06,963] - __main__ - Starting bot
+bot.py:84 #INFO     [2024-01-30 20:27:08,034] - __main__ - Starting bot
+bot.py:84 #INFO     [2024-01-30 20:28:09,233] - __main__ - Starting bot
+bot.py:84 #INFO     [2024-01-30 20:29:10,637] - __main__ - Starting bot
+bot.py:84 #INFO     [2024-01-30 20:30:11,762] - __main__ - Starting bot
+bot.py:84 #INFO     [2024-01-30 20:31:12,999] - __main__ - Starting bot
+bot.py:84 #INFO     [2024-01-30 20:32:14,193] - __main__ - Starting bot
+bot.py:84 #INFO     [2024-01-30 20:33:15,428] - __main__ - Starting bot
+bot.py:84 #INFO     [2024-01-30 20:34:16,527] - __main__ - Starting bot
+bot.py:84 #INFO     [2024-01-30 20:35:17,679] - __main__ - Starting bot
+bot.py:84 #INFO     [2024-01-30 20:36:18,754] - __main__ - Starting bot
+bot.py:84 #INFO     [2024-01-30 20:37:19,904] - __main__ - Starting bot
+bot.py:84 #INFO     [2024-01-30 20:38:21,037] - __main__ - Starting bot
+bot.py:84 #INFO     [2024-01-30 20:39:22,193] - __main__ - Starting bot
