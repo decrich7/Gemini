@@ -12,7 +12,6 @@ from tgbot.services.lang_translate import _
 
 @rate_limit(2, key='start')
 async def start_bot(message: Message, state: FSMContext):
-    print(str(message.chat.id) + '--------')
     args = message.text.split(' ')
     if len(args) == 2:
         await User.add_user(tg_id=message.from_user.id, username=message.from_user.username,
