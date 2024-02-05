@@ -31,6 +31,14 @@ async def start_model_chat(message: types.Message, state: FSMContext):
 
 
     user: User = await User.select_user(message.from_user.id)
+    if user is None:
+        await User.add_user(tg_id=message.from_user.id, username=message.from_user.username,
+                            is_premium=message.from_user.is_premium,
+                            language_code=message.from_user.language_code,
+                            full_name=message.from_user.full_name, prime=False,
+                            referal=None, chat_id=message.chat.id, count_query=0)
+        user: User = await User.select_user(message.from_user.id)
+
     time_difference = datetime.datetime.now() - user.updated_at
 
     if user.count_query > 35 and time_difference.days <= 1:
@@ -60,6 +68,34 @@ async def start_model_chat(message: types.Message, state: FSMContext):
 @rate_limit(3, key='msg')
 async def answer_model_chat(message: types.Message, state: FSMContext):
     await message.answer_chat_action(ChatActions.TYPING)
+
+    user: User = await User.select_user(message.from_user.id)
+    if user is None:
+        await User.add_user(tg_id=message.from_user.id, username=message.from_user.username,
+                            is_premium=message.from_user.is_premium,
+                            language_code=message.from_user.language_code,
+                            full_name=message.from_user.full_name, prime=False,
+                            referal=None, chat_id=message.chat.id, count_query=0)
+        user: User = await User.select_user(message.from_user.id)
+
+    time_difference = datetime.datetime.now() - user.updated_at
+
+    if user.count_query > 35 and time_difference.days <= 1:
+        logging.info(f'Превысил лимит пользователь - {message.from_user.username}')
+        await message.answer(_('🥺 Похоже вы достигли лимита запросов на сегодня, попробуйте через 24 часа😚\n'
+                               '🥸Мы предоставляем самые большие <strong>БЕСПЛАТНЫЕ</strong> лимиты в телеграм\n'
+                               'Но не можем их совсем убрать из за угрозы атаки злоумышленников😞'))
+        await state.finish()
+        return
+    elif time_difference.days >= 1:
+        await User.clear_counter(message.from_user.id)
+        await User.add_count_one(message.from_user.id)
+
+    else:
+        await User.add_count_one(message.from_user.id)
+
+
+
     stiker = await message.answer_sticker('CAACAgIAAxkBAAEDLTlluSyxd49nDKFLl8umFD_0086lXQACkhYAAnU0OErf-3hMDWEWtDQE')
 
     # user = await User.select_user(message.from_user.id)
@@ -73,9 +109,10 @@ async def answer_model_chat(message: types.Message, state: FSMContext):
         'HARM_CATEGORY_HARASSMENT': 'BLOCK_NONE',
         'HARM_CATEGORY_HATE_SPEECH': 'BLOCK_NONE',
         'HARM_CATEGORY_SEXUALLY_EXPLICIT': 'BLOCK_NONE',
-        'temperature': 0.3
+        'temperature': 0.5
 
     }
+
 
     text_model = await main_chat_input(list_answers, params=params)
 

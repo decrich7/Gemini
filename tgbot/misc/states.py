@@ -8,6 +8,7 @@ class ChatMode(StatesGroup):
 
 class Mode(StatesGroup):
     mode = State()
+    change_mode = State()
 
 
 

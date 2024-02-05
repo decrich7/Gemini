@@ -21,6 +21,14 @@ async def answer_model_base(message: types.Message):
     await message.answer_chat_action(ChatActions.TYPING)
     stiker = await message.answer_sticker('CAACAgIAAxkBAAEDLTlluSyxd49nDKFLl8umFD_0086lXQACkhYAAnU0OErf-3hMDWEWtDQE')
     user: User = await User.select_user(message.from_user.id)
+    if user is None:
+        await User.add_user(tg_id=message.from_user.id, username=message.from_user.username,
+                            is_premium=message.from_user.is_premium,
+                            language_code=message.from_user.language_code,
+                            full_name=message.from_user.full_name, prime=False,
+                            referal=None, chat_id=message.chat.id, count_query=0)
+        user: User = await User.select_user(message.from_user.id)
+
     time_difference: datetime = datetime.datetime.now() - user.updated_at
 
     if user.count_query > 35 and time_difference.days <= 1:
@@ -38,7 +46,6 @@ async def answer_model_base(message: types.Message):
 
 
 
-    print(message.text, message.from_user.username)
     params = {
         'HARM_CATEGORY_DANGEROUS_CONTENT': 'BLOCK_NONE',
         'HARM_CATEGORY_HARASSMENT': 'BLOCK_NONE',
@@ -87,7 +94,6 @@ async def buying_apples(call: CallbackQuery):
 
     # quantity = callback_data.get("quantity") parse_mode=SULGUK_PARSE_MODE
     await call.message.edit_text(resp)
-    print(2222)
 
 
 def register_base_mode(dp: Dispatcher):

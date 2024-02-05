@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 
 
+
 from aiogram import types, Dispatcher
 from aiogram.dispatcher import FSMContext
 from aiogram.types import CallbackQuery
@@ -32,6 +33,13 @@ async def start_model_mode(message: types.Message, state: FSMContext):
     await message.answer_chat_action(ChatActions.TYPING)
 
     user: User = await User.select_user(message.from_user.id)
+    if user is None:
+        await User.add_user(tg_id=message.from_user.id, username=message.from_user.username,
+                            is_premium=message.from_user.is_premium,
+                            language_code=message.from_user.language_code,
+                            full_name=message.from_user.full_name, prime=False,
+                            referal=None, chat_id=message.chat.id, count_query=0)
+        user: User = await User.select_user(message.from_user.id)
     time_difference = datetime.datetime.now() - user.updated_at
 
     if user.count_query > 35 and time_difference.days <= 1:
@@ -81,7 +89,11 @@ async def offers_process(call: types.CallbackQuery, state: FSMContext):
 
 async def start_prompt_model(call: CallbackQuery, state: FSMContext):
     await call.message.answer_chat_action(ChatActions.TYPING)
-    await call.message.edit_text(_('Подождите...'))
+
+
+
+
+    # await call.message.edit_text(_('Подождите...'))
     list_mode = await ModePrompt.select_all()
 
     # await call.answer(cache_time=60)
@@ -96,21 +108,25 @@ async def start_prompt_model(call: CallbackQuery, state: FSMContext):
             break
 
     await ChatMessages.add_msg(chat_id=id_chat.get('id_chat'), role='user', text=prompt)
-    start_prompt = [{'user': prompt}]
-    params = {
-        'HARM_CATEGORY_DANGEROUS_CONTENT': 'BLOCK_NONE',
-        'HARM_CATEGORY_HARASSMENT': 'BLOCK_NONE',
-        'HARM_CATEGORY_HATE_SPEECH': 'BLOCK_NONE',
-        'HARM_CATEGORY_SEXUALLY_EXPLICIT': 'BLOCK_NONE',
-        'temperature': 0.4
+    # start_prompt = [{'user': prompt}]
+    # params = {
+    #     'HARM_CATEGORY_DANGEROUS_CONTENT': 'BLOCK_NONE',
+    #     'HARM_CATEGORY_HARASSMENT': 'BLOCK_NONE',
+    #     'HARM_CATEGORY_HATE_SPEECH': 'BLOCK_NONE',
+    #     'HARM_CATEGORY_SEXUALLY_EXPLICIT': 'BLOCK_NONE',
+    #     'temperature': 0.5
+    #
+    # }
 
-    }
 
-    text_model = await main_chat_input(start_prompt, params=params)
 
-    await ChatMessages.add_msg(chat_id=id_chat.get('id_chat'), role='model', text=text_model)
+    # text_model = await main_chat_input(start_prompt, params=params)
+
+    await ChatMessages.add_msg(chat_id=id_chat.get('id_chat'), role='model', text='ok')
     await call.message.edit_text(_('Режим: <strong>{mode_name}</strong> включен!').format(mode_name=mode_name),
                                  reply_markup=finish_mode)
+
+    await Mode.change_mode.set()
 
     # await call.message.answer('Чат завершен')
 
@@ -118,6 +134,34 @@ async def start_prompt_model(call: CallbackQuery, state: FSMContext):
 @rate_limit(3, key='msg')
 async def answer_model_mode(message: types.Message, state: FSMContext):
     await message.answer_chat_action(ChatActions.TYPING)
+
+    user: User = await User.select_user(message.from_user.id)
+    if user is None:
+        await User.add_user(tg_id=message.from_user.id, username=message.from_user.username,
+                            is_premium=message.from_user.is_premium,
+                            language_code=message.from_user.language_code,
+                            full_name=message.from_user.full_name, prime=False,
+                            referal=None, chat_id=message.chat.id, count_query=0)
+        user: User = await User.select_user(message.from_user.id)
+
+    time_difference = datetime.datetime.now() - user.updated_at
+
+    if user.count_query > 35 and time_difference.days <= 1:
+        logging.info(f'Превысил лимит пользователь - {message.from_user.username}')
+        await message.answer(_('🥺 Похоже вы достигли лимита запросов на сегодня, попробуйте через 24 часа😚\n'
+                               '🥸Мы предоставляем самые большие <strong>БЕСПЛАТНЫЕ</strong> лимиты в телеграм\n'
+                               'Но не можем их совсем убрать из за угрозы атаки злоумышленников😞'))
+        await state.finish()
+        return
+    elif time_difference.days >= 1:
+        await User.clear_counter(message.from_user.id)
+        await User.add_count_one(message.from_user.id)
+
+    else:
+        await User.add_count_one(message.from_user.id)
+
+
+
     stiker = await message.answer_sticker('CAACAgIAAxkBAAEDLTlluSyxd49nDKFLl8umFD_0086lXQACkhYAAnU0OErf-3hMDWEWtDQE')
 
     # user = await User.select_user(message.from_user.id)
@@ -162,8 +206,6 @@ def register_mode(dp: Dispatcher):
     dp.register_message_handler(start_model_mode, commands=['mode'])
     dp.register_callback_query_handler(start_prompt_model, state=Mode.mode, text_startswith="mode")
     dp.register_callback_query_handler(offers_process, state=Mode.mode, text_endswith="_offers")
-    dp.register_message_handler(answer_model_mode, state=Mode.mode)
+    dp.register_message_handler(answer_model_mode, state=Mode.change_mode)
 
-    dp.register_callback_query_handler(finish_mode_callback, state=Mode.mode)
-
-    #
+    dp.register_callback_query_handler(finish_mode_callback, state=Mode.change_mode)

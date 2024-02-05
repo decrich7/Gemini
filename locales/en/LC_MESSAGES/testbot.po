@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2024-01-29 17:23+0300\n"
+"POT-Creation-Date: 2024-02-04 00:56+0300\n"
 "PO-Revision-Date: 2024-01-29 16:29+0300\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: en\n"
@@ -18,8 +18,9 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.9.1\n"
 
-#: tgbot/handlers/base_mode.py:28 tgbot/handlers/chat_mode.py:38
-#: tgbot/handlers/mode.py:39
+#: tgbot/handlers/base_mode.py:36 tgbot/handlers/chat_mode.py:46
+#: tgbot/handlers/chat_mode.py:85 tgbot/handlers/mode.py:47
+#: tgbot/handlers/mode.py:149
 msgid ""
 "🥺 Похоже вы достигли лимита запросов на сегодня, попробуйте через 24 "
 "часа😚\n"
@@ -33,11 +34,11 @@ msgstr ""
 "But we can’t remove them completely due to the threat of attack by "
 "intruders😞"
 
-#: tgbot/handlers/base_mode.py:63 tgbot/handlers/mode.py:84
+#: tgbot/handlers/base_mode.py:70
 msgid "Подождите..."
 msgstr "Wait..."
 
-#: tgbot/handlers/base_mode.py:69
+#: tgbot/handlers/base_mode.py:76
 msgid ""
 "🤔 Похоже вы взаимодействуете со старым сообщением\n"
 "Попробуйте задать этот вопрос снова😊"
@@ -45,19 +46,19 @@ msgstr ""
 "🤔 Looks like you are interacting with an old message\n"
 "Try asking this question again😊"
 
-#: tgbot/handlers/base_mode.py:73
+#: tgbot/handlers/base_mode.py:80
 msgid "Сделай ответ короче"
 msgstr "Make your answer shorter"
 
-#: tgbot/handlers/base_mode.py:74
+#: tgbot/handlers/base_mode.py:81
 msgid "Сделай ответ длиннее"
 msgstr "Make your answer longer"
 
-#: tgbot/handlers/base_mode.py:75
+#: tgbot/handlers/base_mode.py:82
 msgid "Сделай ответ более проффесиональным"
 msgstr "Make your answer more professional"
 
-#: tgbot/handlers/base_mode.py:76
+#: tgbot/handlers/base_mode.py:83
 msgid "Сделай ответ проще"
 msgstr "Make the answer simpler"
 
@@ -69,7 +70,7 @@ msgstr ""
 "The chat has already started, if you want to exit the chat mode, then "
 "click on the \" buttoend chat"
 
-#: tgbot/handlers/chat_mode.py:49
+#: tgbot/handlers/chat_mode.py:57
 msgid ""
 "Теперь вы можете отправлять боту сообщения и он будет их запоминать🤓\n"
 "И вести с вами диалог🙃"
@@ -77,7 +78,7 @@ msgstr ""
 "Now you can send messages to the bot and it will remember them🤓\n"
 "And have a dialogue with you🙃"
 
-#: tgbot/handlers/chat_mode.py:89
+#: tgbot/handlers/chat_mode.py:127
 msgid "Чат завершен"
 msgstr "Chat ended"
 
@@ -130,19 +131,19 @@ msgstr ""
 "/chat - Chat mode (the bot will remember messages)\n"
 "<strong>If the bot stops responding, click to reboot</strong> - /start"
 
-#: tgbot/handlers/mode.py:51
+#: tgbot/handlers/mode.py:59
 msgid "🦾 Выберите режим в котором будет работать бот:"
 msgstr "🦾 Select the mode in which the bot will work:"
 
-#: tgbot/handlers/mode.py:112
+#: tgbot/handlers/mode.py:126
 msgid "Режим: <strong>{mode_name}</strong> включен!"
 msgstr "Mode: <strong>{mode_name}</strong> enabled!"
 
-#: tgbot/handlers/mode.py:146
+#: tgbot/handlers/mode.py:189
 msgid "Вы вышли из режима"
 msgstr "You are out of mode"
 
-#: tgbot/handlers/start.py:45
+#: tgbot/handlers/start.py:44
 msgid ""
 "🚀 Приветствую тебя!\n"
 "\n"
@@ -159,6 +160,8 @@ msgid ""
 "нотальной карты</i>\n"
 "\n"
 "   4. 🤵‍♂ <i>Генерирование идей для стартапа</i>\n"
+"\n"
+"    5. 🎥 <i>Написание сценариев к Reels, TikTok, Shorts</i>\n"
 "    <strong>И многое другое!</strong>\n"
 "\n"
 "🌌 Встречай будущее прямо здесь и сейчас! 🌌\n"
@@ -167,33 +170,36 @@ msgid ""
 msgstr ""
 "🚀 Greetings!\n"
 "\n"
-"<strong>🤖 I AM A COMPLETELY FREE assistant based on the latest Gemini "
-"artificial intelligence from Google</strong>\n"
+"<strong>🤖 I AM A COMPLETELY FREE assistant based on the latest "
+"Gemini artificial intelligence from Google</strong>\n"
 "\n"
 "<strong>What I can do:\n"
-"</strong>1. 📄 <i>Writing essays, essays, reports on various themes and in"
-" different styles</i>\n"
+"</strong>1. 📄 <i>Writing essays, essays, reports on various "
+"themes and in different styles</i>\n"
 "\n"
 " 2. 🌙 <i>Interpretation of dreams</i>\n"
 "\n"
-" 3. 🔮 <i>Individual astrological forecast and compilation notal map</i>\n"
+" 3. 🔮 <i>Individual astrological forecast and compilation "
+"notal map</i>\n"
 "\n"
 " 4. 🤵‍♂ <i>Generating ideas for a startup</i>\n"
+"\n"
+" 5. 🎥 <i>Writing scripts for Reels, TikTok, Shorts</i>\n"
 " <strong>And much more!</strong>\n"
 "\n"
 "🌌 Meet the future right here and now! 🌌\n"
 "\n"
 "🤓To find out all the options, click - /help"
 
-#: tgbot/handlers/start.py:46
+#: tgbot/handlers/start.py:45
 msgid "👀 Напиши мне любой вопрос"
 msgstr "👀 Write to me with any question"
 
-#: tgbot/handlers/start.py:47
+#: tgbot/handlers/start.py:46
 msgid "🤔 Выберите язык"
 msgstr "🤔 Select language"
 
-#: tgbot/handlers/start.py:60
+#: tgbot/handlers/start.py:58
 msgid "Ваш язык был изменен"
 msgstr "Your language has been changed"
 

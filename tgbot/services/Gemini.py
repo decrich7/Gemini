@@ -36,13 +36,11 @@ class BaseAioRequests(object):
 
     async def get_response(self, msg: str, params=None) -> dict:
         json = self.make_json(msg, params)
-        print(json)
         url = self.make_url()
         async with aiohttp.ClientSession() as session:
             proxy_auth = aiohttp.BasicAuth(self.proxy.get('login'), self.proxy.get('password'))
             async with session.post(url, headers=self.headers, json=json, proxy=self.proxy.get('proxy'),
                                     proxy_auth=proxy_auth) as resp:
-                print(await resp.json())
                 return await resp.json()
 #
 #

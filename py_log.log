@@ -1,2 +1,2 @@
-dispatcher.py:408 #WARNING  [2024-01-29 14:22:08,595] - aiogram.dispatcher.dispatcher - Polling is stopped.
-dispatcher.py:436 #INFO     [2024-01-29 14:22:08,616] - aiogram.dispatcher.dispatcher - Stop polling...
+sudo apt-get upgrade
+scp -r "C:\Users\PAJILOY PAVUK\PycharmProjects\Gemini" root@94.228.113.189:/root/Gemini_bot/Gemini2/
