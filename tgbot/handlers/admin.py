@@ -22,9 +22,8 @@ async def admin_start(message: Message):
     7. Посчитать кол-во пользователей c рефералки - /count_referal\n\n
     8. Рассылка сообщения - /mass_post\n\n
     9. Файл с подписчиками - /get_file_tg\n\n
-    10. Начать рассылку с определенного id - /mass_post_id\n\n
+    10. Начать рассылку с определенного id - /mass_post_id -\n\n
     11. Кол-во всех пользователей - /count_all
-
     ''')
 
 

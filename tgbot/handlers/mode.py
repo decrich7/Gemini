@@ -88,7 +88,6 @@ async def offers_process(call: types.CallbackQuery, state: FSMContext):
 
 
 async def start_prompt_model(call: CallbackQuery, state: FSMContext):
-    await call.message.answer_chat_action(ChatActions.TYPING)
 
 
 
@@ -106,7 +105,6 @@ async def start_prompt_model(call: CallbackQuery, state: FSMContext):
             prompt = subarray[1]
             mode_name = subarray[-1]
             break
-
     await ChatMessages.add_msg(chat_id=id_chat.get('id_chat'), role='user', text=prompt)
     # start_prompt = [{'user': prompt}]
     # params = {
@@ -162,14 +160,25 @@ async def answer_model_mode(message: types.Message, state: FSMContext):
 
 
 
-    stiker = await message.answer_sticker('CAACAgIAAxkBAAEDLTlluSyxd49nDKFLl8umFD_0086lXQACkhYAAnU0OErf-3hMDWEWtDQE')
 
     # user = await User.select_user(message.from_user.id)
     id_chat = await state.get_data()
-    # chat = await Chat.select_chat(id_chat.get('id_chat'))
-    await ChatMessages.add_msg(chat_id=id_chat.get('id_chat'), role='user', text=message.text)
+
     msgs = await ChatMessages.select_msg_chat(id_chat.get('id_chat'))
     list_answers = [{i.role: i.text} for i in msgs]
+
+    if len(list_answers) > 2:
+        if list(list_answers[-1].keys())[0] == 'user':
+            return
+
+
+    stiker = await message.answer_sticker('CAACAgIAAxkBAAEDLTlluSyxd49nDKFLl8umFD_0086lXQACkhYAAnU0OErf-3hMDWEWtDQE')
+
+    # chat = await Chat.select_chat(id_chat.get('id_chat'))
+    await ChatMessages.add_msg(chat_id=id_chat.get('id_chat'), role='user', text=message.text)
+    list_answers.append({'user': message.text})
+
+
     params = {
         'HARM_CATEGORY_DANGEROUS_CONTENT': 'BLOCK_NONE',
         'HARM_CATEGORY_HARASSMENT': 'BLOCK_NONE',

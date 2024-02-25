@@ -96,14 +96,34 @@ async def answer_model_chat(message: types.Message, state: FSMContext):
 
 
 
-    stiker = await message.answer_sticker('CAACAgIAAxkBAAEDLTlluSyxd49nDKFLl8umFD_0086lXQACkhYAAnU0OErf-3hMDWEWtDQE')
 
-    # user = await User.select_user(message.from_user.id)
     id_chat = await state.get_data()
-    # chat = await Chat.select_chat(id_chat.get('id_chat'))
-    await ChatMessages.add_msg(chat_id=id_chat.get('id_chat'), role='user', text=message.text)
+
     msgs = await ChatMessages.select_msg_chat(id_chat.get('id_chat'))
     list_answers = [{i.role: i.text} for i in msgs]
+
+    if len(list_answers) > 1:
+        if list(list_answers[-1].keys())[0] == 'user':
+
+            return
+    # chat = await Chat.select_chat(id_chat.get('id_chat'))
+
+
+
+    stiker = await message.answer_sticker('CAACAgIAAxkBAAEDLTlluSyxd49nDKFLl8umFD_0086lXQACkhYAAnU0OErf-3hMDWEWtDQE')
+
+    await ChatMessages.add_msg(chat_id=id_chat.get('id_chat'), role='user', text=message.text)
+    list_answers.append({'user': message.text})
+    # user = await User.select_user(message.from_user.id)
+
+
+
+
+
+
+
+
+
     params = {
         'HARM_CATEGORY_DANGEROUS_CONTENT': 'BLOCK_NONE',
         'HARM_CATEGORY_HARASSMENT': 'BLOCK_NONE',

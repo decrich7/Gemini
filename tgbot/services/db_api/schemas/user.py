@@ -67,12 +67,6 @@ class User(TimedBaseModel):
     async def delete_user(chat_id: str):
         await User.delete.where((User.chat_id == chat_id)).gino.scalar()
 
-
-
-    # @staticmethod
-    # async def count_users():
-    #     total = await db.func.count(User.id).gino.scalar()
-    #     return total
     @staticmethod
     async def update_prime(tg_id, prime):
         user = await User.get(tg_id)

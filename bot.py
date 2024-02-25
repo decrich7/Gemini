@@ -26,7 +26,7 @@ from tgbot.handlers.start import register_start_bot
 from tgbot.middlewares.environment import EnvironmentMiddleware
 from tgbot.middlewares.multy_lang import ACLMiddleware
 from tgbot.middlewares.throttling import ThrottlingMiddleware
-from tgbot.misc.clean_db import clean_message_edit,clean_chats_and_msg_chats
+from tgbot.misc.clean_db import clean_message_edit, clean_chats_and_msg_chats, clean_count_query_users
 from tgbot.misc.set_bot_commands import set_default_commands
 from tgbot.services.db_api import db, db_gino
 from tgbot.services.db_api.schemas.data import Proxy, Token, ModePrompt
@@ -39,9 +39,10 @@ scheduler = AsyncIOScheduler()
 logger = logging.getLogger(__name__)
 
 
-def shedule_jobs():
+def shedule_jobs(storage):
     scheduler.add_job(clean_message_edit, "interval", hours=24)
-    scheduler.add_job(clean_chats_and_msg_chats, "interval", hours=24)
+    scheduler.add_job(clean_chats_and_msg_chats, "interval", hours=24, args=(storage,))
+    scheduler.add_job(clean_count_query_users, "interval", hours=24)
 
 
 
@@ -77,7 +78,7 @@ async def main():
     logging.basicConfig(
         level=logging.INFO,
         format=u'%(filename)s:%(lineno)d #%(levelname)-8s [%(asctime)s] - %(name)s - %(message)s',
-        filename="py_log2.log"
+        filename="log2.log"
     )
     # logging.getLogger('gino.engine._SAEngine').setLevel(logging.ERROR)
 
@@ -126,7 +127,7 @@ async def main():
     register_all_middlewares(dp, config)
     register_all_filters(dp)
     register_all_handlers(dp)
-    shedule_jobs()
+    shedule_jobs(storage)
     scheduler.start()
 
 
